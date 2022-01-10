@@ -10,6 +10,8 @@ class User(db.Model, UserMixin):
     username = db.Column(db.String(40), nullable=False, unique=True)
     email = db.Column(db.String(255), nullable=False, unique=True)
     hashed_password = db.Column(db.String(255), nullable=False)
+    books=db.relationship('Book', back_populates='user', cascade='all, delete')
+    tags=db.relationship('Tag', back_populates='user', cascade='all, delete')
 
     @property
     def password(self):
