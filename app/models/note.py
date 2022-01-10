@@ -1,4 +1,5 @@
 from .db import db
+from .taggednote import tagged_notes
 from flask_login import UserMixin
 
 
@@ -10,7 +11,7 @@ class Note(db.Model, UserMixin):
     note_text = db.Column(db.Text, nullable=False)
     bookId= db.Column(db.Integer, db.ForeignKey('books.id'), nullable=False, )
     book=db.relationship('Book', back_populates='notes')
-    tags=db.relationship('Tag', secondary='tagged_notes', back_populates='notes')
+    tags=db.relationship('Tag', secondary=tagged_notes, back_populates='notes')
     def to_dict(self):
         return {
             'id': self.id,
