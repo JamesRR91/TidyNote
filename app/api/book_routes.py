@@ -14,7 +14,7 @@ def get_all_books():
   print("?????????????????????????????????????/" + current_user.get_id())
   all_books = Book.query.filter(Book.userId == current_user.get_id()).all()
   # all_books = Book.query.filter(Book.userId == current_user.get_id()).all()
-  print(all_books[0])
+  # print(all_books[0])
   return {'all_books': [book.to_dict() for book in all_books]}
 
 
@@ -29,9 +29,9 @@ def add_book():
     return new_book.to_dict()
 
 
-# const data = { name: 'test_newbook1', userId: '1' };
+# const data = { book_name: 'test_newbook1', userId: '1' };
 
-# fetch('/api/books', {
+# fetch('/api/books/new_book', {
 #   method: 'POST',
 #   headers: {
 #     'Content-Type': 'application/json',
