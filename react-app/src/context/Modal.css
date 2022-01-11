@@ -1,0 +1,235 @@
+#modal {
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    overflow: scroll;
+    max-width: 100%;
+    padding: 30px 50px;
+  }
+
+  #modal-background {
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.7);
+    padding: 30px 50px;
+  }
+
+  #modal-content {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    width: fit-content;
+    height: fit-content;
+    align-items: center;
+    justify-content: center;
+    font-size: 2rem;
+    margin: 10%;
+    padding:3%;
+  }
+
+  .modal-form {
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    margin:auto;
+    height:auto;
+    width: auto;
+    text-align: center;
+    justify-content: center;
+  }
+
+  .modal-button {
+    background: hsl(200, 50%, 50%);
+    color: white;
+    border: none;
+    padding: .5em .75em;
+    border-radius: .25em;
+    cursor: pointer;
+  }
+
+  .modal-button-review {
+    background: hsl(200, 50%, 50%);
+    color: white;
+    border: none;
+    padding: .5em .75em;
+    border-radius: .25em;
+    cursor: pointer;
+    justify-content: center;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .modal-button-submit {
+    flex: display;
+    flex-direction: row;
+    align-items:center;
+    justify-content: center;
+    background: hsl(200, 50%, 50%);
+    color: white;
+    border: none;
+    padding: .5em .75em;
+    border-radius: .25em;
+    cursor: pointer;
+    height: 3rem;
+    width: 10rem;
+  }
+
+  label {
+    font-size: 1.2rem;
+    align-items: center;
+  }
+
+  .modal-container {
+    width: 100%;
+    height: 90%;
+    border-radius: 2px;
+    border-style: groove;
+    background: silver;
+  }
+
+  .modal-errors {
+    text-align: start;
+    font-size: 1rem;
+
+  }
+
+  .modal-errors-container {
+    font-size: 1rem;
+  }
+
+  .create-button {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .comment-container {
+    background-color:silver;
+
+  }
+
+  .comment-container-single {
+    box-sizing: border-box;
+    border: solid black 2px;
+    text-align: center;
+  }
+
+  .recipe-title-single {
+    text-align: center;
+  }
+
+  .recipe-detail-list {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    margin:0 auto;
+    text-align: left;
+  }
+
+  .recipe-detail-list-container {
+    text-align: left;
+    font-size: 15px;
+  }
+
+  .card-body-single {
+
+    text-align: left;
+  }
+
+  .img {
+    align-items: center;
+    height: fit-content;
+    width: fit-content;
+  }
+
+  .list-container {
+    text-align: center;
+    background: silver;
+  }
+
+  .review-list-single {
+    text-align: center;
+    padding: 2px;
+    border-radius: 1px;
+  }
+
+  .review-map-buttons {
+    display: flex;
+    padding-top:10px;
+  }
+
+  .img-modal {
+    display: block;
+    align-items: center;
+    height: 300px;
+    width: 200px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .q-a-container {
+    padding: 9px;
+    border-bottom: groove;
+  }
+
+  .button-row-review {
+    display: block;
+    text-align: center;
+    align-items: center;
+    margin-left: auto;
+    margin-right: auto;
+    margin: 0;
+  }
+
+  .review-detail-list-container {
+    padding-top: 10px;
+    text-align: center;
+    font-weight: bold;
+  }
+
+  .review-detail-list {
+    font-weight: bold;
+    font-size: 22px;
+  }
+
+  .review-detail-single {
+    max-height: 90%;
+    background: silver;
+  }
+
+  .review-title {
+    text-align: center;
+    background: hsl(200, 50%, 50%);
+    font-weight: bolder;
+    font-size: 26px;
+  }
+  .modal-content-delete {
+    text-align: center;
+    width: 600px;
+    height: 150px;
+    font-size: 2rem;
+  }
+
+  .button-row-delete {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0;
+    top: 50%;
+  }
+
+  .comments {
+    font-size: 1.3rem;
+    margin: 8px;
+    padding: 2px;
+    padding-bottom: 2px;
+  }

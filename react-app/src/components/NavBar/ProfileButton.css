@@ -1,0 +1,9 @@
+.profile-list-item {
+    border-radius: 1px;
+    border-style: ridge;
+    font-weight: bold;
+}
+
+.profile-dropdown {
+    font-weight: bold;
+}

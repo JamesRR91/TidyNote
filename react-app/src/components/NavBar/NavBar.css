@@ -1,4 +1,4 @@
-#nav-container {
+.nav-container {
     background-color: rgba(255, 255, 255, 0.849);
     position: fixed;
     display: flex;
@@ -30,9 +30,18 @@ ul {
 
 .home-nav {
     padding-right: 50px;
+    margin-left: 25px;
 }
 
 #logoutButton {
-    
+  margin-left: 50px;
     background-color: green;
+}
+
+.login{
+  margin-left: 1400px;
+  
+}
+.signup{
+  margin-left: 40px;
 }
