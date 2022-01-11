@@ -39,8 +39,9 @@ ul {
 }
 
 .login{
-  margin-left: 1400px;
-  
+  display: flex;
+  margin-left: 1100px;
+
 }
 .signup{
   margin-left: 40px;
