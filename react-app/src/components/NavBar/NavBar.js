@@ -6,7 +6,7 @@ import "./NavBar.css"
 
 const NavBar = () => {
   return (
-    <div id="nav-container">
+    <div className="nav-container">
       <nav>
         <ul>
           <li>
@@ -15,12 +15,12 @@ const NavBar = () => {
             </NavLink>
           </li>
           <li>
-            <NavLink className="home-nav" to='/login' exact={true} activeClassName='active'>
+            <NavLink className="login" to='/login' exact={true} activeClassName='active'>
               Login
             </NavLink>
           </li>
           <li>
-            <NavLink className="home-nav" to='/sign-up' exact={true} activeClassName='active'>
+            <NavLink className="signup" to='/sign-up' exact={true} activeClassName='active'>
               Sign Up
             </NavLink>
           </li>
