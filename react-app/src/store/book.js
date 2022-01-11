@@ -20,11 +20,12 @@ const update = (book) => {
 };
 
 export const getBooks = () => async (dispatch) => {
-  const response = await fetch('/api/books');
+  const response = await fetch('/api/books/');
+  console.log('RESPONSE', response);
 
   if (response.ok) {
     const books = await response.json();
-    dispatch(load(books));
+    dispatch(load(books.all_books));
     return books;
   }
 };

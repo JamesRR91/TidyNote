@@ -13,14 +13,13 @@ export default function GetBooks(){
     }, [dispatch]);
     return(
         <div className="get-books-parent">
-        <div className='books-list'>
-                {books.length>0 ? books.map(({id, book_name}) => (
-                    <RecipeDetail id={id}
-                        key={id}
-                        book_name={book_name}
-                    />
-                )):null}
-
+        <ul>
+          {books.map(({ id, book_name }) => (
+            <li key={id}>
+              {book_name}
+            </li>
+          ))}
+        </ul>
         </div>
     )
 }
