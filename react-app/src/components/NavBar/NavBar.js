@@ -11,7 +11,7 @@ const NavBar = () => {
         <ul>
           <li>
             <NavLink className="home-nav" to='/' exact={true} activeClassName='active'>
-              Home
+              TidyNote
             </NavLink>
           </li>
           <li>
@@ -29,11 +29,11 @@ const NavBar = () => {
               Users
             </NavLink>
           </li> */}
-          <li>
+          {/* <li>
             <div id="logoutButton">
                 <LogoutButton />
             </div>
-          </li>
+          </li> */}
         </ul>
       </nav>
     </div>

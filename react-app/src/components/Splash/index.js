@@ -14,7 +14,7 @@ export default function Splash(){
                 <h4 className="quote2">Remember everything and tackle any project with your notes, tasks, and schedule all in one place.</h4>
             </div>
             <div className="SplashBox2">
-
+                <img src='https://cdn.discordapp.com/attachments/536996013911572484/930289688286220288/favcon.png' alt='green' className="image"></img>
             </div>
         </div>
     )

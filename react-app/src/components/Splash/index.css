@@ -4,7 +4,7 @@
     grid-template-rows: repeat(4, 1fr);
     grid-column-gap: 10px;
     grid-row-gap: 10px;
-   
+
 
     }
 
@@ -27,13 +27,19 @@
     border-radius: 20px;
 
 }
-
+.image{
+    width: 60%;
+    margin-bottom: 200px;
+    margin-left: 50px;
+    background-color: burlywood;
+    border-radius: 50%;
+}
 .SplashBox2{
-    background-color: black;
     height: 100%;
     margin-left: 100px;
     margin-right: 100px;
     border-radius: 20px;
+
 
 }
 .welcome{
