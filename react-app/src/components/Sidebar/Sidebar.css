@@ -1,0 +1,27 @@
+.sidebar-div ul{
+    display: flex;
+    flex-direction: column;
+    align-self: flex-start;
+}
+
+.sidebar-div h3{
+    padding-inline-start: 40px;
+}
+
+.sidebar-parent {
+height: 100vh;
+
+
+}
+
+.sidebar {
+    display: flex;
+    flex-direction: column;
+    justify-self: center;
+    align-self: center;
+    align-content: center;
+    width: 30%;
+    border: 5px solid #FFFF00;
+    padding-top: 10vh;
+    height: 30vh;
+}
