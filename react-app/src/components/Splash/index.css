@@ -4,6 +4,8 @@
     grid-template-rows: repeat(4, 1fr);
     grid-column-gap: 10px;
     grid-row-gap: 10px;
+   
+
     }
 
     .nav-container { grid-area: 1 / 1 / 2 / 5; }
@@ -14,12 +16,11 @@
 
     .nav-container{
     background-color: lightblue;
-    height: 10%;
+    /* height: 10%; */
     border-radius: 20px;
 }
 
 .SplashBox1 {
-    background-color: green;
     margin-left: 100px;
     margin-right: 100px;
     height: 400px;
@@ -34,4 +35,23 @@
     margin-right: 100px;
     border-radius: 20px;
 
+}
+.welcome{
+    font-size: 30px;
+    text-align: center;
+    font-style: italic;
+}
+
+.quote{
+    margin-top: 40px;
+    font-size: 25px;
+    text-align: center;
+}
+
+.quote2{
+    margin-top: 10px;
+    font-size: 25px;
+    text-align: center;
+    font-style: italic;
+    text-decoration: lightpink;
 }
