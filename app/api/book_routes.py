@@ -14,8 +14,10 @@ def get_all_books():
   print("?????????????????????????????????????/" + current_user.get_id())
   all_books = Book.query.filter(Book.userId == current_user.get_id()).all()
   # all_books = Book.query.filter(Book.userId == current_user.get_id()).all()
-  # print(all_books[0])
+  # print(all_books[4].id)
   return {'all_books': [book.to_dict() for book in all_books]}
+
+# fetch('/api/books/', {method: 'Get'}).then(res => res.json()).then(data => console.log(data));
 
 
 @book_routes.route('/new_book', methods=["GET", "POST"])
@@ -43,3 +45,20 @@ def add_book():
 # .then(data => {
 #   console.log('Success:', data);
 # })
+
+
+  # print(all_books[4].id)
+
+
+@book_routes.route('/<int:bookId>',methods=['DELETE'])
+def delete_book(bookId):
+  book=Book.query.get(bookId)
+  print("tidynoteeeeee : ", book)
+  db.session.delete(book)
+  db.session.commit()
+
+  return book.to_dict()
+
+
+
+# fetch('/api/books/4', {method: 'delete'}).then(res => res.json()).then(data => console.log(data));
