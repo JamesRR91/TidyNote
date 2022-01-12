@@ -1,16 +1,16 @@
 from app.config import Config
 from flask import Flask, Blueprint, jsonify, json, request, session
-from app.models import db, User, Book
+from app.models import db, User, Book, Note
 from flask_sqlalchemy import SQLAlchemy
-from flask_login import current_user
+from flask_login import current_user, login_required
 
 book_routes = Blueprint("books", __name__)
 
 
 
 @book_routes.route("/", methods=['Get'])
+@login_required
 def get_all_books():
-  # print("????????????????????????????????????????????????????????????????")
   print("?????????????????????????????????????/" + current_user.get_id())
   all_books = Book.query.filter(Book.userId == current_user.get_id()).all()
   # all_books = Book.query.filter(Book.userId == current_user.get_id()).all()
@@ -20,21 +20,19 @@ def get_all_books():
 # fetch('/api/books/', {method: 'Get'}).then(res => res.json()).then(data => console.log(data));
 
 
-@book_routes.route('/new_book', methods=["GET", "POST"])
+@book_routes.route('/new_book', methods=["POST"])
+@login_required
 def add_book():
-    print("REQUEST!!!", request.json)
-
     new_book = Book(book_name=request.json['book_name'],userId=current_user.get_id())
-    print("NEW BOOK!!!", new_book)
     db.session.add(new_book)
     db.session.commit()
 
     return new_book.to_dict()
 
 
-# const data = { book_name: 'test_newbook1', userId: '1' };
+# const data = { note_name: 'test_newnote1', note_text: 'THIS IS A TEST'}
 
-# fetch('/api/books/new_book', {
+# fetch('/api/books/1', {
 #   method: 'POST',
 #   headers: {
 #     'Content-Type': 'application/json',
@@ -51,14 +49,32 @@ def add_book():
 
 
 @book_routes.route('/<int:bookId>',methods=['DELETE'])
+@login_required
 def delete_book(bookId):
   book=Book.query.get(bookId)
-  print("tidynoteeeeee : ", book)
   db.session.delete(book)
   db.session.commit()
 
   return book.to_dict()
 
+@book_routes.route('/<int:bookId>',methods=['PUT'])
+@login_required
+def edit_book(bookId):
+  book=Book.query.get(bookId)
+  print("TESTBLOCK", book)
+  book.book_name=request.json['book_name']
+  db.session.commit()
+
+  return book.to_dict()
 
 
 # fetch('/api/books/4', {method: 'delete'}).then(res => res.json()).then(data => console.log(data));
+
+@book_routes.route('/<int:bookId>', methods=["POST"])
+@login_required
+def add_note(bookId):
+    new_note = Note(note_name=request.json['note_name'], note_text=request.json['note_text'], bookId=bookId)
+    db.session.add(new_note)
+    db.session.commit()
+
+    return new_note.to_dict()
