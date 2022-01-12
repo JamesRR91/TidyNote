@@ -39,7 +39,7 @@ export default function PostBook(){
               placeholder="New Book"
               name="name"
             />
-            <button type="submit">Save</button>
+            <button className='submit-button' type="submit">Save</button>
           </form>
         </div>
         );

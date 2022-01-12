@@ -21,7 +21,7 @@
     box-shadow: 0 0 2px black;
     border-radius: 40px;
     border: 1px solid black;
-    color: #687980;
+    color: white;
   }
 
   .form-title {
@@ -30,7 +30,7 @@
   }
 
   .user-form-errors {
-    color: rgb(163, 66, 66);
+    color: white;
       font-size: 14px;
   }
 
@@ -74,12 +74,11 @@
   }
 
 
-  .submit_button{
-    color: #35444b;
-    background-color: #bb8c75;
+  .aa{
+    color: black;
     /* align-items: center; */
     width: fit-content;
-    font-size: 16px;
+    font-size: 14px;
     font-weight: 700;
     margin-top:10px;
     margin-left: 10px;
@@ -87,10 +86,7 @@
 
   }
 
-  .submit_button:hover {
-      box-shadow: 0 0 2pt 2pt #687980;
-      border-radius: 5px;
-  }
+
 
   .cancel-button {
     display: flex;
@@ -99,17 +95,30 @@
   }
 
   .cancel-button > a {
-    color: #F3BDA1;
+    color: white;
     margin: 5px 0 5px 0;
     font-weight: 700;
   }
 
-  .cancel-button > a:hover {
-    box-shadow: 0 0 2pt 2pt #687980;
-    border-radius: 5px;
-  }
 
   .redirect-link {
-    color: #F3BDA1;
+    color: white;
     text-decoration: none;
   }
+
+  /* .logout-button{
+    text-decoration: none;
+  background-color: rgb(15, 89, 119);
+  color: white;
+  font-weight: bold;
+  padding: 10px;
+  padding-top: 4px;
+  display: flex;
+  justify-content: center;
+  height: 20px;
+  width: 70px;
+  margin-top: 8px;
+  margin-bottom: 5px;
+  border-radius: 20px;
+
+  } */

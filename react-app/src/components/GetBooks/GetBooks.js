@@ -15,15 +15,15 @@ export default function GetBooks(){
     }, [dispatch]);
     return(
         <div className="get-books-parent">
-        <ul>
-          {books.map(({ id, book_name }) => (
-            <li key={id}>
-              {book_name}
-              <EditBook />
-              <DeleteBook id={id}/>
-            </li>
-          ))}
-        </ul>
+          <ul>
+            {books.map(({ id, book_name }) => (
+              <li key={id}>
+                {book_name}
+                <EditBook />
+                <DeleteBook id={id}/>
+              </li>
+            ))}
+          </ul>
         </div>
     )
 }

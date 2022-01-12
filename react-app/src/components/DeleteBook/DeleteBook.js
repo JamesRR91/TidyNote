@@ -15,7 +15,7 @@ function DeleteBook({ id }) {
   };
 
   return (
-    <button onClick={handleSubmit}>
+    <button className="delete-button" onClick={handleSubmit}>
       Delete
     </button>
   );

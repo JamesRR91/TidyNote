@@ -21,7 +21,11 @@ height: 100vh;
     align-self: center;
     align-content: center;
     width: 30%;
-    border: 5px solid #FFFF00;
-    padding-top: 10vh;
-    height: 30vh;
+    border: 5px solid white;
+    margin-top: 70px;
+    margin-left: 15px;
+    /* padding-top: 10vh; */
+    height: 700px;
+    border-radius: 20px;
+    background-color: lightblue;
 }

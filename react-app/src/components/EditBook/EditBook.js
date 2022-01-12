@@ -5,8 +5,8 @@ import { useHistory } from 'react-router-dom';
 export default function EditBook(){
 
     return(
-        <div className="edit-book-button">
-        <button>Edit</button>
+        <div >
+            <button className="delete-button">Edit</button>
         </div>
     )
 }
