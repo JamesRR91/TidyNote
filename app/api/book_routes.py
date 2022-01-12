@@ -11,7 +11,6 @@ book_routes = Blueprint("books", __name__)
 @book_routes.route("/", methods=['Get'])
 @login_required
 def get_all_books():
-  print("?????????????????????????????????????/" + current_user.get_id())
   all_books = Book.query.filter(Book.userId == current_user.get_id()).all()
   # all_books = Book.query.filter(Book.userId == current_user.get_id()).all()
   # print(all_books[4].id)
@@ -61,7 +60,6 @@ def delete_book(bookId):
 @login_required
 def edit_book(bookId):
   book=Book.query.get(bookId)
-  print("TESTBLOCK", book)
   book.book_name=request.json['book_name']
   db.session.commit()
 
@@ -70,11 +68,11 @@ def edit_book(bookId):
 
 # fetch('/api/books/4', {method: 'delete'}).then(res => res.json()).then(data => console.log(data));
 
-@book_routes.route('/<int:bookId>', methods=["POST"])
-@login_required
-def add_note(bookId):
-    new_note = Note(note_name=request.json['note_name'], note_text=request.json['note_text'], bookId=bookId)
-    db.session.add(new_note)
-    db.session.commit()
+# @book_routes.route('/<int:bookId>', methods=["POST"])
+# @login_required
+# def add_note(bookId):
+#     new_note = Note(note_name=request.json['note_name'], note_text=request.json['note_text'], bookId=bookId)
+#     db.session.add(new_note)
+#     db.session.commit()
 
-    return new_note.to_dict()
+#     return new_note.to_dict()

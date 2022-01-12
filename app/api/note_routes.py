@@ -15,14 +15,14 @@ def get_all_notes():
   return {'all_notes': [note.to_dict() for note in all_notes]}
 # fetch('/api/notes/', {method: 'Get'}).then(res => res.json()).then(data => console.log(data))
 
-# @note_routes.route('/new_note', methods=["POST"])
-# @login_required
-# def add_note():
-#     new_note = Note(note_name=request.json['note_name'], note_text=request.json['note_text'], bookId=current_user.get_id())
-#     db.session.add(new_note)
-#     db.session.commit()
+@note_routes.route('/new_note', methods=["POST"])
+@login_required
+def add_note():
+    new_note = Note(note_name=request.json['note_name'], note_text=request.json['note_text'], bookId=request.json['bookId'])
+    db.session.add(new_note)
+    db.session.commit()
 
-#     return new_note.to_dict()
+    return new_note.to_dict()
 
 @note_routes.route('/<int:noteId>',methods=['DELETE'])
 @login_required
@@ -39,7 +39,6 @@ def delete_note(noteId):
 @login_required
 def edit_note(noteId):
   note=Book.query.get(noteId)
-  print("TESTBLOCK", note)
   note.note_name=request.json['note_name']
   note.note_text=request.json['note_text']
   db.session.commit()
