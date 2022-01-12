@@ -3,6 +3,7 @@ import { useEffect, useState } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 import { getAllNotes } from '../../store/note';
 import PostNote from '../PostNote/PostNote';
+import EditNote from '../EditNote/EditNote'
 import DeleteNote from '../DeleteNote/DeleteNote';
 import './GetNotes.css';
 
@@ -19,7 +20,7 @@ export default function GetNotes(){
             {notes.map(({ id, note_name, note_text}) => (
               <li key={id}>
                 {note_name}
-                {note_text}
+                <EditNote id={id} />
                 <DeleteNote id={id} />
               </li>
             ))}
