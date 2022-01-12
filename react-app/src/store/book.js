@@ -31,7 +31,7 @@ export const getBooks = () => async (dispatch) => {
 };
 
 export const createBook = (newBook) => async (dispatch) => {
-  const response = await fetch(`/api/books`, {
+  const response = await fetch(`/api/books/new_book`, {
     method: 'post',
     headers: { 'Content-Type': 'application/json' },
     body: JSON.stringify(newBook)

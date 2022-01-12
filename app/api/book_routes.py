@@ -22,7 +22,8 @@ def get_all_books():
 def add_book():
     print("REQUEST!!!", request.json)
 
-    new_book = Book(book_name=request.json['book_name'],userId=request.json['userId'])
+    new_book = Book(book_name=request.json['book_name'],userId=current_user.get_id())
+    print("NEW BOOK!!!", new_book)
     db.session.add(new_book)
     db.session.commit()
 

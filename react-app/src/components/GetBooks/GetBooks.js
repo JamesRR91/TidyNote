@@ -3,6 +3,8 @@ import { useEffect, useState } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 import { getBooks } from '../../store/book';
 import './GetBooks.css';
+import DeleteBook from '../DeleteBook/DeleteBook';
+import EditBook from '../EditBook/EditBook';
 
 export default function GetBooks(){
     const dispatch= useDispatch();
@@ -17,6 +19,8 @@ export default function GetBooks(){
           {books.map(({ id, book_name }) => (
             <li key={id}>
               {book_name}
+              <EditBook />
+              <DeleteBook id={id}/>
             </li>
           ))}
         </ul>
