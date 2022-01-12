@@ -19,7 +19,7 @@ export default function GetBooks(){
             {books.map(({ id, book_name }) => (
               <li key={id}>
                 {book_name}
-                <EditBook />
+                <EditBook id = {id}/>
                 <DeleteBook id={id}/>
               </li>
             ))}
