@@ -38,9 +38,10 @@ def delete_note(noteId):
 @note_routes.route('/<int:noteId>',methods=['PUT'])
 @login_required
 def edit_note(noteId):
-  note=Book.query.get(noteId)
+  note=Note.query.get(noteId)
   note.note_name=request.json['note_name']
   note.note_text=request.json['note_text']
+  note.bookId=request.json['bookId']
   db.session.commit()
 
   return note.to_dict()

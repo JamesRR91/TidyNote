@@ -20,14 +20,14 @@ const update = (tag) => {
 };
 
 export const getAllTags = () => async (dispatch) => {
-  const response = await fetch('/api/tags');
+  const response = await fetch('/api/tags/');
   const tags = await response.json();
-  dispatch(load(tags));
+  dispatch(load(tags.all_tags));
   return tags;
 };
 
 export const createTag = (newTag) => async (dispatch) => {
-  const response = await fetch(`/api/tags`, {
+  const response = await fetch(`/api/tags/new_tag`, {
     method: 'post',
     headers: { 'Content-Type': 'application/json' },
     body: JSON.stringify(newTag)

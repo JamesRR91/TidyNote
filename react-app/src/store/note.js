@@ -22,7 +22,7 @@ const update = (note) => {
 export const getAllNotes = () => async (dispatch) => {
   const response = await fetch('/api/notes/');
   const notes = await response.json();
-  dispatch(load(notes));
+  dispatch(load(notes.all_notes));
   return notes;
 };
 
@@ -53,7 +53,7 @@ export const deleteNote = (noteId) => async (dispatch) => {
 };
 
 export const updateNote = (data) => async (dispatch) => {
-  const response = await fetch(`/api/books/${data.bookId}/notes/${data.id}`, {
+  const response = await fetch(`/api/notes/${data.id}`, {
     method: 'put',
     headers: {
       'Content-Type': 'application/json'
@@ -78,8 +78,8 @@ const noteReducer = (state = initialState, action) => {
       // newState.entries[note.id] = note;
       // });
       // console.log('LIGHTS, CAMERA', action.notes);
-      for (let i = 0; i < action.notes.all_notes.length; i++) {
-        let note = action.notes.all_notes[i];
+      for (let i = 0; i < action.notes.length; i++) {
+        let note = action.notes[i];
         newState.entries[note.id] = note;
       }
       return newState;

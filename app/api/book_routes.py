@@ -29,10 +29,10 @@ def add_book():
     return new_book.to_dict()
 
 
-# const data = { note_name: 'test_newnote1', note_text: 'THIS IS A TEST'}
+# const data = { note_name: 'PLEASE CHANGE', note_text: 'NO REALLY, I WANNA BE DONE EARLY', bookId: 7}
 
-# fetch('/api/books/1', {
-#   method: 'POST',
+# fetch('/api/notes/1', {
+#   method: 'PUT',
 #   headers: {
 #     'Content-Type': 'application/json',
 #   },
