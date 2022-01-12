@@ -9,7 +9,6 @@ export default function EditBook({id}){
 
     const dispatch =useDispatch();
     const book=useSelector((state)=> state.book.entries[id])
-    console.log("!!!!!!!!!!!!!!!!!!!!!!!!!" + id)
 
     const [name,setName]=useState(book.book_name);
 

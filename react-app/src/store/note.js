@@ -20,15 +20,15 @@ const update = (note) => {
 };
 
 export const getAllNotes = () => async (dispatch) => {
-  const response = await fetch('/api/notes');
+  const response = await fetch('/api/notes/');
   const notes = await response.json();
   dispatch(load(notes));
   return notes;
 };
 
 export const createNote = (newNote) => async (dispatch) => {
-  const { bookId } = newNote;
-  const response = await fetch(`/api/books/${bookId}`, {
+  // const { bookId } = newNote;
+  const response = await fetch(`/api/notes/new_note`, {
     method: 'post',
     headers: { 'Content-Type': 'application/json' },
     body: JSON.stringify(newNote)
@@ -41,8 +41,8 @@ export const createNote = (newNote) => async (dispatch) => {
   }
 };
 
-export const deleteNote = (noteId, bookId) => async (dispatch) => {
-  const response = await fetch(`/api/books/${bookId}/notes/${noteId}`, {
+export const deleteNote = (noteId) => async (dispatch) => {
+  const response = await fetch(`/api/notes/${noteId}`, {
     method: 'delete'
   });
 
@@ -77,8 +77,9 @@ const noteReducer = (state = initialState, action) => {
       // action.notes.forEach((note) => {
       // newState.entries[note.id] = note;
       // });
-      for (let i = 0; i < action.notes.length; i++) {
-        let note = action.notes[i];
+      // console.log('LIGHTS, CAMERA', action.notes);
+      for (let i = 0; i < action.notes.all_notes.length; i++) {
+        let note = action.notes.all_notes[i];
         newState.entries[note.id] = note;
       }
       return newState;

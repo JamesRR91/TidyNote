@@ -1,6 +1,7 @@
 import React from "react"
 import './index.css';
 import Sidebar from "../Sidebar/Sidebar";
+import GetNotes from "../GetNotes/GetNotes";
 import { useSelector } from 'react-redux';
 
 
@@ -27,8 +28,9 @@ export default function Splash(){
             <div className="sidebar-parent">
                 <div className='sidebar-div'>
                     <Sidebar />
-                </div>
-            </div>
+                    </div>
+                    <GetNotes />
+                    </div>
 
             )
         }
