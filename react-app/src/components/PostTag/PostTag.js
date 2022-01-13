@@ -35,7 +35,7 @@ export default function PostTag(){
       };
     return(
         <div className="PostTag">
-          <form onSubmit={handleSubmit}>
+          <form className='input-data' onSubmit={handleSubmit}>
             <input
               type="text"
               onChange={(e) => setName(e.target.value)}

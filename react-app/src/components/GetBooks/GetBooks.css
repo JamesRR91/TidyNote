@@ -16,5 +16,12 @@
 .makerow{
     display: flex;
     flex-direction: row;
-    
+
+}
+
+.book-button{
+    padding: 5px;
+    font-weight: bold;
+    font-size: 15px;
+    border-radius: 5px;
 }

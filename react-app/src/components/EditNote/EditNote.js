@@ -37,8 +37,8 @@ export default function EditNote({ id }) {
 
   return (
     <div className='InputBox'>
-      <form  className='input-data' onSubmit={handleSubmit}>
-        <input
+      <form  onSubmit={handleSubmit}>
+        <input className='input-data'
           type='text'
           onChange={(e) => setName(e.target.value)}
           value={name}

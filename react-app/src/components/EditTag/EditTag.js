@@ -28,9 +28,9 @@ export default function EditTag({id}){
     };
 
     return(
-        <div className="editTagInputBox">
-            <form onSubmit={handleSubmit}>
-                <input
+        <div className="editBookInputBox">
+            <form className="makerow" onSubmit={handleSubmit}>
+                <input className="input-bar"
                 type="text"
                 onChange={(e) => setName(e.target.value)}
                 value={name}
