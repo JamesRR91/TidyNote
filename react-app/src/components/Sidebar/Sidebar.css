@@ -52,7 +52,7 @@ height: 100vh;
     /* justify-self: center;
     align-self: center;
     align-content: center; */
-    width: 30%;
+    width: 61%;
     border: 5px solid white;
 
     margin-left: 15px;
@@ -71,6 +71,11 @@ height: 100vh;
 
 }
 .makerow{
+    display: flex;
+    flex-direction: row;
+}
+
+.tag{
     display: flex;
     flex-direction: row;
 }

@@ -1,3 +1,4 @@
 .ck-editor__editable_inline {
-    color:black
+    color:black;
+    height: 15vh;
   }
