@@ -30,7 +30,7 @@ export default function GetBooks(){
  */}
 
 
-          <ul>
+        
             {books.map(({ id, book_name }) => (
               <div className='book' key={id}>
                     <button onClick={() => setOpen(!open)}>{book_name}</button>
@@ -44,7 +44,7 @@ export default function GetBooks(){
                     </div>
               </div>
             ))}
-          </ul>
+
         </div>
     )
 }

@@ -1,4 +1,12 @@
 .input-data{
    /* padding: 10px; */
-   margin-left: 50px;
+   margin: 10px;
+   
+}
+
+.PostNote{
+   background-color: rgb(15, 89, 119);
+   padding: 40px;
+   margin: 25px;
+   border-radius: 20px;
 }
