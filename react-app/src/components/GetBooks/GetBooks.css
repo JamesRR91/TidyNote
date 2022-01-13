@@ -11,3 +11,7 @@
     border-radius: 20px;
 }
 
+.makerow{
+    display: flex;
+    flex-direction: row;
+}
