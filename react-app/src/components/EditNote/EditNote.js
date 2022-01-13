@@ -3,21 +3,9 @@ import { useSelector, useDispatch } from 'react-redux';
 import { updateNote } from '../../store/note';
 import { getBooks } from '../../store/book';
 import { useHistory } from 'react-router-dom';
-import './EditNote.css';
-
-
-
-
-
-
 import { CKEditor } from '@ckeditor/ckeditor5-react';
 import ClassicEditor from '@ckeditor/ckeditor5-build-classic';
-
-
-
-
-
-
+import './EditNote.css';
 
 
 export default function EditNote({ id }) {
@@ -56,9 +44,6 @@ export default function EditNote({ id }) {
           value={name}
           text='name'
         />
-
-
-
         <CKEditor
             editor={ClassicEditor}
             data={text}

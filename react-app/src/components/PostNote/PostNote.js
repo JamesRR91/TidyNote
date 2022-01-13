@@ -3,6 +3,8 @@ import { useEffect, useState } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 import { createNote } from '../../store/note';
 import { getBooks } from '../../store/book';
+import { CKEditor } from '@ckeditor/ckeditor5-react';
+import ClassicEditor from '@ckeditor/ckeditor5-build-classic';
 import './PostNote.css';
 
 export default function PostNote(){
@@ -62,13 +64,16 @@ export default function PostNote(){
               placeholder="New Note"
               name="name"
             />
-            <input className='input-data'
-              type="textarea"
-              onChange={(e) => setText(e.target.value)}
-              value={text}
-              placeholder="Enter your note here..."
-              name="text"
-            />
+          <CKEditor
+              editor={ClassicEditor}
+              data={text}
+              onChange={(event, editor) => {
+              const data = editor.getData();
+
+              setText(data)
+
+              }}
+          />
             <select className='input-data'
             onChange={(e)=>setBookId(e.target.value)}
             value={bookId}
