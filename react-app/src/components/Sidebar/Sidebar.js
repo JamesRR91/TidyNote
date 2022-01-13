@@ -16,7 +16,7 @@ export default function Sidebar(){
                 <h3 className="tag-title">Tags</h3>
             </div>
             <div className="sidebar2">
-                <h3 className="note-title">Notes</h3>
+                <h3 className="book-title">Notes</h3>
                 <PostNote />
                 <GetNotes />
             </div>
