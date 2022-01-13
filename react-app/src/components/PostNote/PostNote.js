@@ -7,6 +7,7 @@ import { CKEditor } from '@ckeditor/ckeditor5-react';
 import ClassicEditor from '@ckeditor/ckeditor5-build-classic';
 import './PostNote.css';
 
+
 export default function PostNote(){
     const booksObj = useSelector((state) => state.book.entries);
     const books = Object.values(booksObj);
@@ -54,6 +55,22 @@ export default function PostNote(){
         dispatch(createNote(newNote));
         reset();
       };
+
+      const editorConfiguration = {
+        toolbar: [
+          'heading', '|',
+          'bold', 'italic', '|',
+          'link', '|',
+          // 'outdent', 'indent', '|',
+          'bulletedList', 'numberedList', '|',
+          // 'code', 'codeBlock', '|',
+          'insertTable', '|',
+          'blockQuote', '|',
+          'undo', 'redo'
+        ], shouldNotGroupWhenFull: true
+     };
+
+
     return(
         <div className="PostNote">
           <form className='input-data' onSubmit={handleSubmit}>
@@ -66,10 +83,10 @@ export default function PostNote(){
             />
           <CKEditor  className='input-data'
               editor={ClassicEditor}
+              config={ editorConfiguration }
               data={text}
               onChange={(event, editor) => {
               const data = editor.getData();
-
               setText(data)
 
               }}

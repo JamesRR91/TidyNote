@@ -10,3 +10,14 @@
    margin: 25px;
    border-radius: 20px;
 }
+
+.ck-editor__editable_inline {
+   color:black;
+   height: 15vh;
+   /* --ck-custom-background: hsl(145, 100%, 50%); */
+ }
+
+ /* :root {
+   --ck-color-upload-bar-background: hsl(209, 92%, 70%);
+   --ck-custom-background: hsl(145, 100%, 50%);
+ } */

@@ -7,6 +7,10 @@ import { CKEditor } from '@ckeditor/ckeditor5-react';
 import ClassicEditor from '@ckeditor/ckeditor5-build-classic';
 import './EditNote.css';
 
+// console.log('!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!')
+// console.log(ClassicEditor.builtinPlugins.map( plugin => plugin.pluginName ));
+
+
 
 export default function EditNote({ id }) {
   const booksObj = useSelector((state) => state.book.entries);
@@ -35,6 +39,20 @@ export default function EditNote({ id }) {
     dispatch(updateNote(payload));
   };
 
+  const editorConfiguration = {
+    toolbar: [
+      'heading', '|',
+      'bold', 'italic', '|',
+      'link', '|',
+      // 'outdent', 'indent', '|',
+      'bulletedList', 'numberedList', '|',
+      // 'code', 'codeBlock', '|',
+      'insertTable', '|',
+      'blockQuote', '|',
+      'undo', 'redo'
+    ], shouldNotGroupWhenFull: true
+ };
+
   return (
     <div className='InputBox'>
       <form  onSubmit={handleSubmit}>
@@ -46,6 +64,7 @@ export default function EditNote({ id }) {
         />
         <CKEditor className='input-data'
             editor={ClassicEditor}
+            config={ editorConfiguration }
             data={text}
             onChange={(event, editor) => {
             const data = editor.getData();
