@@ -1,0 +1,8 @@
+.makerow{
+    display: flex;
+    flex-direction: row;
+}
+
+.input-bar{
+    margin-top: 10px;
+}

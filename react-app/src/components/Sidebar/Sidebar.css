@@ -70,3 +70,7 @@ height: 100vh;
 
 
 }
+.makerow{
+    display: flex;
+    flex-direction: row;
+}

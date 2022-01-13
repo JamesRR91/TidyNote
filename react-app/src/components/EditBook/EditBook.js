@@ -29,8 +29,8 @@ export default function EditBook({id}){
 
     return(
         <div className="editBookInputBox">
-            <form onSubmit={handleSubmit}>
-                <input
+            <form className="makerow" onSubmit={handleSubmit}>
+                <input className="input-bar"
                 type="text"
                 onChange={(e) => setName(e.target.value)}
                 value={name}
