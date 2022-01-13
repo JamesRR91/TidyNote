@@ -35,7 +35,7 @@ function ProfileButton({ user }) {
               <li className='profile-list-item'>Username:{user.username}</li>
               <li className='profile-list-item'>Email:{user.email}</li>
               <li>
-                <button className='modal-button'onClick={logout}>Log Out</button>
+                <button className='logout-button'onClick={logout}>Log Out</button>
               </li>
             </ul>
           )}
