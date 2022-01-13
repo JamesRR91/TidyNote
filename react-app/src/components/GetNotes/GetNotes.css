@@ -1,0 +1,11 @@
+.get-notes-parent{
+    color: white;
+    margin: 30px;
+}
+
+.note{
+    margin-top: 10px;
+    background-color:  rgb(15, 89, 119);
+    padding: 20px;
+    border-radius: 20px;
+}

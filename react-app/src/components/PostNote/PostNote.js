@@ -55,21 +55,21 @@ export default function PostNote(){
     return(
         <div className="PostNote">
           <form onSubmit={handleSubmit}>
-            <input
+            <input className='input-data'
               type="text"
               onChange={(e) => setName(e.target.value)}
               value={name}
               placeholder="New Note"
               name="name"
             />
-            <input
+            <input className='input-data'
               type="textarea"
               onChange={(e) => setText(e.target.value)}
               value={text}
               placeholder="Enter your note here..."
               name="text"
             />
-            <select
+            <select className='input-data'
             onChange={(e)=>setBookId(e.target.value)}
             value={bookId}
             required

@@ -28,9 +28,8 @@ export default function Splash(){
             <div className="sidebar-parent">
                 <div className='sidebar-div'>
                     <Sidebar />
-                    </div>
-                    <GetNotes />
-                    </div>
+                </div>
+            </div>
 
             )
         }

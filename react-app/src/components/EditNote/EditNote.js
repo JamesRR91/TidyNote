@@ -59,7 +59,7 @@ export default function EditNote({ id }) {
           ))}
         </select>
 
-        <button type='submit' className='submit-button'>
+        <button type='submit' className='delete-button'>
           Edit
         </button>
       </form>
