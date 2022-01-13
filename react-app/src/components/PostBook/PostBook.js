@@ -31,7 +31,7 @@ export default function PostBook(){
       };
     return(
         <div className="PostBook">
-          <form onSubmit={handleSubmit}>
+          <form className='input-data' onSubmit={handleSubmit}>
             <input
               type="text"
               onChange={(e) => setName(e.target.value)}

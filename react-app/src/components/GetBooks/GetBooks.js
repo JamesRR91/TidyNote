@@ -30,10 +30,10 @@ export default function GetBooks(){
  */}
 
 
-        
+
             {books.map(({ id, book_name }) => (
               <div className='book' key={id}>
-                    <button onClick={() => setOpen(!open)}>{book_name}</button>
+                    <button className='book-button' onClick={() => setOpen(!open)}>{book_name}</button>
                     <div className='makerow'>
                       {
                         open?<EditBook id = {id}/>:null

@@ -18,7 +18,9 @@ export default function GetNotes(){
         <div className="get-notes-parent">
             {notes.map(({ id, note_name, note_text}) => (
               <div className='note' key={id}>
-                {note_name}
+                <div className='note-name'>
+                  Name of The Note : {note_name}
+                </div>
                 <EditNote id={id} />
                 <DeleteNote id={id} />
               </div>
