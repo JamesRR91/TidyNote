@@ -6,6 +6,7 @@ import './GetBooks.css';
 import DeleteBook from '../DeleteBook/DeleteBook';
 import EditBook from '../EditBook/EditBook';
 
+
 export default function GetBooks(){
     const dispatch= useDispatch();
     const booksObj = useSelector((state) => state.book.entries);
@@ -13,14 +14,31 @@ export default function GetBooks(){
     useEffect(() => {
         dispatch(getBooks());
     }, [dispatch]);
+
+
+    const [open, setOpen] = useState(false)
+
     return(
         <div className="get-books-parent">
+
+        {/* <button onClick={() => setOpen(!open)}>{book_name}</button> */}
+
+        {/* {
+          open?<EditBook id = {id}/>:null
+          open?<DeleteBook id={id}/>:null
+        }
+ */}
+
+
           <ul>
             {books.map(({ id, book_name }) => (
               <div className='book' key={id}>
-                {book_name}
-                <EditBook id = {id}/>
-                <DeleteBook id={id}/>
+                    <button onClick={() => setOpen(!open)}>{book_name}</button>
+
+                    {
+                      open?<EditBook id = {id}/>:null
+                      // open?<DeleteBook id={id}/>:null
+                    }
               </div>
             ))}
           </ul>
