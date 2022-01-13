@@ -15,17 +15,19 @@ export default function GetTags(){
     }, [dispatch]);
     return(
         <div className="get-tags-parent">
-          <ul>
+
             {tags.map(({ id, tag_name }) => (
                 <div className='book' key={id}>
                     <div className='tag'>
                         {tag_name}
                     </div>
-                    <EditTag id={id} />
-                    <DeleteTag id={id} />
+                    <div className='makerow'>
+                        <EditTag id={id} />
+                        <DeleteTag id={id} />
+                    </div>
                 </div>
             ))}
-          </ul>
+        
         </div>
     )
 }
