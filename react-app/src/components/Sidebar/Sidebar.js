@@ -4,6 +4,8 @@ import GetBooks from "../GetBooks/GetBooks";
 import GetNotes from "../GetNotes/GetNotes";
 import PostNote from "../PostNote/PostNote";
 import PostBook from "../PostBook/PostBook";
+import PostTag from "../PostTag/PostTag";
+import GetTags from "../GetTags/GetTags";
 import './Sidebar.css';
 
 export default function Sidebar(){
@@ -14,6 +16,8 @@ export default function Sidebar(){
                 <PostBook />
                 <GetBooks />
                 <h3 className="tag-title">Tags</h3>
+                <PostTag />
+                <GetTags />
             </div>
             <div className="sidebar2">
                 <h3 className="book-title">Notes</h3>
