@@ -1,8 +1,8 @@
-.sidebar-div ul{
+/* .sidebar-div ul{
     display: flex;
     flex-direction: column;
     align-self: flex-start;
-}
+} */
 
 .sidebar-div h3{
     padding-inline-start: 40px;
@@ -22,10 +22,10 @@ height: 100vh;
     align-content: center;
     width: 30%;
     border: 5px solid white;
-    margin-top: 700px;
+    margin-top: 800px;
     margin-left: 15px;
     /* padding-top: 10vh; */
-    height: 700px;
+
     border-radius: 20px;
     background-color: lightblue;
 }
@@ -38,10 +38,10 @@ height: 100vh;
     align-content: center;
     width: 30%;
     border: 5px solid white;
-    margin-top: 700px;
+    margin-top: 800px;
     margin-left: 10px;
     /* padding-top: 10vh; */
-    height: 700px;
+
     border-radius: 20px;
     background-color: lightblue;
 }
