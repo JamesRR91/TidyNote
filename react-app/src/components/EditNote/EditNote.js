@@ -65,24 +65,9 @@ export default function EditNote({ id }) {
             onChange={(event, editor) => {
             const data = editor.getData();
 
-            text = data
+            setText(data)
 
             }}
-        />
-
-
-
-
-
-
-
-
-
-        <input
-          type='text'
-          onChange={(e) => setText(e.target.value)}
-          value={text}
-          text='text'
         />
         <select
           onChange={(e) => setBookId(e.target.value)}
