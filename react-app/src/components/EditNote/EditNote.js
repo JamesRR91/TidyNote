@@ -5,6 +5,21 @@ import { getBooks } from '../../store/book';
 import { useHistory } from 'react-router-dom';
 import './EditNote.css';
 
+
+
+
+
+
+import { CKEditor } from '@ckeditor/ckeditor5-react';
+import ClassicEditor from '@ckeditor/ckeditor5-build-classic';
+
+
+
+
+
+
+
+
 export default function EditNote({ id }) {
   const booksObj = useSelector((state) => state.book.entries);
   const books = Object.values(booksObj);
@@ -41,11 +56,18 @@ export default function EditNote({ id }) {
           value={name}
           text='name'
         />
-        <input
-          type='text'
-          onChange={(e) => setText(e.target.value)}
-          value={text}
-          text='text'
+
+
+
+        <CKEditor
+            editor={ClassicEditor}
+            data={text}
+            onChange={(event, editor) => {
+            const data = editor.getData();
+
+            setText(data)
+
+            }}
         />
         <select
           onChange={(e) => setBookId(e.target.value)}
