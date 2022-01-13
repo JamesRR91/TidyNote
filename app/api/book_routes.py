@@ -59,7 +59,9 @@ def delete_book(bookId):
 @book_routes.route('/<int:bookId>',methods=['PUT'])
 @login_required
 def edit_book(bookId):
+  print('BOOKID', bookId, type(bookId))
   book=Book.query.get(bookId)
+  print('BOOK BOOK BOOK BOOK', book, type(book))
   book.book_name=request.json['book_name']
   db.session.commit()
 

@@ -15,14 +15,14 @@ const remove = (taggedNoteId) => {
 };
 
 export const getAllTaggedNotes = () => async (dispatch) => {
-  const response = await fetch('/api/taggednotes');
+  const response = await fetch('/api/taggednotes/');
   const taggedNotes = await response.json();
-  dispatch(load(taggedNotes));
+  dispatch(load(taggedNotes.all_tagged_notes));
   return taggedNotes;
 };
 
 export const createTaggedNote = (newTaggedNote) => async (dispatch) => {
-  const response = await fetch(`/api/taggednotes`, {
+  const response = await fetch(`/api/taggednotes/new_tagged_note`, {
     method: 'post',
     headers: { 'Content-Type': 'application/json' },
     body: JSON.stringify(newTaggedNote)
@@ -35,14 +35,14 @@ export const createTaggedNote = (newTaggedNote) => async (dispatch) => {
   }
 };
 
-export const deleteTaggedNote = (taggedNoteId) => async (dispatch) => {
-  const response = await fetch(`/api/taggednotes/${taggedNoteId}`, {
+export const deleteTaggedNote = () => async (dispatch) => {
+  const response = await fetch(`/api/taggednotes/`, {
     method: 'delete'
   });
+  const taggedNote = await response.json();
 
   if (response.ok) {
-    // const taggedNote = await response.json();
-    dispatch(remove(taggedNoteId));
+    dispatch(remove(taggedNote));
   }
 };
 

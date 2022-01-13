@@ -19,9 +19,9 @@ tagged_notes = db.Table(
 
 #     def to_dict(self):
 #         return {
-#             'id': self.id,
-#             'tagId': self.tagId,
-#             'noteId': self.noteId
+            # 'id': self.id,
+            # 'tagId': self.tagId,
+            # 'noteId': self.noteId
 #         }
 
 # association_table = Table('association', Base.metadata,
