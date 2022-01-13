@@ -17,11 +17,11 @@ export default function GetBooks(){
         <div className="get-books-parent">
           <ul>
             {books.map(({ id, book_name }) => (
-              <li key={id}>
+              <div className='book' key={id}>
                 {book_name}
                 <EditBook id = {id}/>
                 <DeleteBook id={id}/>
-              </li>
+              </div>
             ))}
           </ul>
         </div>

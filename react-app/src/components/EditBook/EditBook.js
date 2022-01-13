@@ -36,7 +36,7 @@ export default function EditBook({id}){
                 value={name}
                 name="name"
                 />
-                <button type="submit" className="submit-button" >Edit</button>
+                <button type="submit" className="delete-button" >Edit</button>
             </form>
         </div>
     )
