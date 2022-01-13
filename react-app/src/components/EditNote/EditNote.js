@@ -37,14 +37,14 @@ export default function EditNote({ id }) {
 
   return (
     <div className='InputBox'>
-      <form onSubmit={handleSubmit}>
+      <form  className='input-data' onSubmit={handleSubmit}>
         <input
           type='text'
           onChange={(e) => setName(e.target.value)}
           value={name}
           text='name'
         />
-        <CKEditor
+        <CKEditor className='input-data'
             editor={ClassicEditor}
             data={text}
             onChange={(event, editor) => {
@@ -54,7 +54,7 @@ export default function EditNote({ id }) {
 
             }}
         />
-        <select
+        <select className='input-data'
           onChange={(e) => setBookId(e.target.value)}
           value={bookId}
           required

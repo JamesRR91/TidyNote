@@ -56,7 +56,7 @@ export default function PostNote(){
       };
     return(
         <div className="PostNote">
-          <form onSubmit={handleSubmit}>
+          <form className='input-data' onSubmit={handleSubmit}>
             <input className='input-data'
               type="text"
               onChange={(e) => setName(e.target.value)}
@@ -64,7 +64,7 @@ export default function PostNote(){
               placeholder="New Note"
               name="name"
             />
-          <CKEditor
+          <CKEditor  className='input-data'
               editor={ClassicEditor}
               data={text}
               onChange={(event, editor) => {
@@ -85,7 +85,7 @@ export default function PostNote(){
                 <option value={id}>{book_name}</option>))}
             </select>
 
-            <button className='submit-button' type="submit">Save</button>
+            <button className='delete-button' type="submit">Save</button>
           </form>
         </div>
         );

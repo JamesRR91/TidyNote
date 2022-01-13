@@ -16,7 +16,6 @@ export default function GetNotes(){
     }, [dispatch]);
     return(
         <div className="get-notes-parent">
-          <ul>
             {notes.map(({ id, note_name, note_text}) => (
               <div className='note' key={id}>
                 {note_name}
@@ -24,7 +23,7 @@ export default function GetNotes(){
                 <DeleteNote id={id} />
               </div>
             ))}
-          </ul>
+
         </div>
     )
 }
