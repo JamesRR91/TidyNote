@@ -5,6 +5,7 @@ import { getBooks } from '../../store/book';
 import './GetBooks.css';
 import DeleteBook from '../DeleteBook/DeleteBook';
 import EditBook from '../EditBook/EditBook';
+import { NavLink } from 'react-router-dom';
 
 
 export default function GetBooks(){
@@ -16,30 +17,32 @@ export default function GetBooks(){
     }, [dispatch]);
 
 
-    const [open, setOpen] = useState(false)
+    const [openId, setOpenId]=useState(null);
 
+    const handleClick= (id) => {
+      if (openId===id) {
+        setOpenId(null)
+      } else {
+        setOpenId(id)
+      }
+    }
     return(
         <div className="get-books-parent">
 
-        {/* <button onClick={() => setOpen(!open)}>{book_name}</button> */}
-
-        {/* {
-          open?<EditBook id = {id}/>:null
-          open?<DeleteBook id={id}/>:null
-        }
- */}
 
 
 
             {books.map(({ id, book_name }) => (
               <div className='book' key={id}>
-                    <button className='book-button' onClick={() => setOpen(!open)}>{book_name}</button>
+                    <NavLink to={`/books/${id}`}>
+                      <button className='book-button' onClick={()=>handleClick(id)}>{book_name}</button>
+                    </NavLink>
                     <div className='makerow'>
                       {
-                        open?<EditBook id = {id}/>:null
+                        openId===id?<EditBook id = {id}/>:null
                       }
                       {
-                        open?<DeleteBook id={id}/>:null
+                        openId===id?<DeleteBook id={id}/>:null
                       }
                     </div>
               </div>
