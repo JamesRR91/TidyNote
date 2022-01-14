@@ -7,6 +7,7 @@ import PostBook from "../PostBook/PostBook";
 import PostTag from "../PostTag/PostTag";
 import GetTags from "../GetTags/GetTags";
 import './Sidebar.css';
+import { Route, Switch } from "react-router-dom";
 
 export default function Sidebar(){
     return(
@@ -20,9 +21,19 @@ export default function Sidebar(){
                 <GetTags />
             </div>
             <div className="sidebar2">
-                <h3 className="book-title">Notes</h3>
-                <PostNote />
-                <GetNotes />
+            <h3 className="book-title">Notes</h3>
+            <PostNote />
+            <Switch>
+                <Route path='/' exact>
+                    <GetNotes />
+                </Route>
+                <Route path='/books/:bookId'>
+                    <GetNotes />
+                </Route>
+                <Route path='/tags/:tagId'>
+                    <GetNotes />
+                </Route>
+            </Switch>
             </div>
         </div>
     )

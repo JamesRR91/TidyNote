@@ -31,7 +31,7 @@ function App() {
     <BrowserRouter>
       <NavBar loaded={loaded}/>
       <Switch>
-        <Route path='/' exact={true}>
+        <Route path='/'>
           <Splash />
         </Route>
         <Route path='/login' exact={true}>
