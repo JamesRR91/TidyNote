@@ -33,10 +33,15 @@ export default function SeeTaggedNotes({id}){
             <li id={`tag-${tag.id}`} key={tag.id}>
               <i className="fas fa-tag" />
               {tag.tag_name}
-              <TaggingNotes note_id={id} tag_id={tag.id}tag_name={tag.tag_name} tagged={matchingTagIds.includes(tag.id)}/>
+              <TaggingNotes
+               note_id={id}
+               tag_id={tag.id}
+               tag_name={tag.tag_name}
+               tagged={matchingTagIds.includes(tag.id)}
+               taggedNote_id={Object.keys(taggedObj).find(key => taggedObj[key].noteId === id && taggedObj[key].tagId === tag.id)}/>
+
             </li>
           ))}
-          {matchingTags.length === 0 && 'No Tags'}
         </ul>
       </span>
     </>
