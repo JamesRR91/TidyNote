@@ -103,6 +103,7 @@ export default function EditNote({ id }) {
 
             }}
         />
+        <div className='makerow'>
         <select className='input-data'
           onChange={(e) => setBookId(e.target.value)}
           value={bookId}
@@ -125,6 +126,7 @@ export default function EditNote({ id }) {
               closeOnClick
               rtl={false}
               />
+        </div>
       </form>
     </div>
   );

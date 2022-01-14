@@ -18,7 +18,7 @@ height: 100vh;
     padding-inline-start: 0px;
 }
 .sidebar-parent {
-    height: 100vh;
+    height: 90vh;
 }
 
 .sidebar-div ul{
@@ -66,7 +66,7 @@ height: 100vh;
     display: flex;
     flex-direction: row;
 
-    margin-top: 80px;
+    margin-top: 10px;
 
 
 }

@@ -28,9 +28,8 @@ export default function SeeTaggedNotes({id}){
   return (
     <>
       <span className="taglist">
-        <ul>
           {tags.length > 0 && tags.map((tag) => (
-            <li id={`tag-${tag.id}`} key={tag.id}>
+            <div className='seetag' id={`tag-${tag.id}`} key={tag.id}>
               <i className="fas fa-tag" />
               {tag.tag_name}
               <TaggingNotes
@@ -40,9 +39,9 @@ export default function SeeTaggedNotes({id}){
                tagged={matchingTagIds.includes(tag.id)}
                taggedNote_id={Object.keys(taggedObj).find(key => taggedObj[key].noteId === id && taggedObj[key].tagId === tag.id)}/>
 
-            </li>
+            </div>
           ))}
-        </ul>
+
       </span>
     </>
   )
