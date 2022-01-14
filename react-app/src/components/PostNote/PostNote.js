@@ -5,6 +5,9 @@ import { createNote } from '../../store/note';
 import { getBooks } from '../../store/book';
 import { CKEditor } from '@ckeditor/ckeditor5-react';
 import ClassicEditor from '@ckeditor/ckeditor5-build-classic';
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
+
 import './PostNote.css';
 
 
@@ -35,13 +38,13 @@ export default function PostNote(){
       const handleSubmit = (e) => {
         e.preventDefault();
 
-        if (!name) {
-          return alert('Your note must have a name.')
-        }
+        // if (!name) {
+        //   return alert('Your note must have a name.')
+        // }
 
-        if(!text) {
-            return alert('Your note must have content.')
-        }
+        // if(!text) {
+        //     return alert('Your note must have content.')
+        // }
         // console.log('HERE WE GO AGAIN', bookId)
         // if(bookId===undefined) {
         //     return alert('Please select a notebook!')
@@ -70,6 +73,19 @@ export default function PostNote(){
         ], shouldNotGroupWhenFull: true
      };
 
+     const notify = () => {
+      if (!name && !text && !bookId) {
+        toast.error("Your note needs some information!")
+      } else if (!name) {
+        toast.error("The note needs a name!");
+      } else if (!text) {
+        toast.error("The note needs some content!");
+      } else if (!bookId) {
+        toast.error("The note needs to be assigned to a book!");
+      } else {
+        toast.success("Saved!")
+      }
+     }
 
     return(
         <div className="PostNote">
@@ -102,7 +118,16 @@ export default function PostNote(){
                 <option value={id}>{book_name}</option>))}
             </select>
 
-            <button className='delete-button' type="submit">Save</button>
+            <button onClick={notify} className='delete-button' type="submit">Save</button>
+            <ToastContainer
+              theme='colored'
+              position="top-right"
+              autoClose={5000}
+              hideProgressBar={false}
+              newestOnTop={false}
+              closeOnClick
+              rtl={false}
+              />
           </form>
         </div>
         );
