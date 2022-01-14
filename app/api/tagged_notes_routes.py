@@ -44,6 +44,7 @@ def add_tagged_note():
 @tagged_notes_routes.route('/', methods=["DELETE"])
 @login_required
 def delete_tagged_note():
+  print('NOTE NOTE', request.json)
   noteId=request.json['noteId']
   deleting_note=Note.query.get(noteId)
   tagId=request.json['tagId']
