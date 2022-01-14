@@ -10,8 +10,6 @@ note_routes = Blueprint("notes", __name__)
 @login_required
 def get_all_notes():
   all_notes = Note.query.join(Book).filter(Book.userId == current_user.get_id())
-  # all_books = Book.query.filter(Book.userId == current_user.get_id()).all()
-  # print(all_books[4].id)
   return {'all_notes': [note.to_dict() for note in all_notes]}
 # fetch('/api/notes/', {method: 'Get'}).then(res => res.json()).then(data => console.log(data))
 

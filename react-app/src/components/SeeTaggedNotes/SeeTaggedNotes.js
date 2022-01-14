@@ -10,18 +10,16 @@ import TaggingNotes from '../TaggingNotes/TaggingNotes';
 import './SeeTaggedNotes.css';
 
 export default function SeeTaggedNotes({id}){
-    const dispatch= useDispatch();
-    const taggedObj = useSelector((state) => state.tagged.entries);
-    const taggedNotes = Object.values(taggedObj);
-    const tagsObj = useSelector((state) => state.tag.entries);
-    const tags = Object.values(tagsObj);
-    useEffect(() => {
-        dispatch(getAllTaggedNotes());
-    }, [dispatch]);
-    // console.log('TNOTE TNOTE TNOTE TNOTE TNOTE', taggedNotes)
-    // console.log('TAG TAG TAG TAG', tags)
-    // console.log('IDIDIDIDIDIDIDIDIDIDI', id)
-    const matches = taggedNotes.filter((taggedNote) => taggedNote.noteId === id);
+  const dispatch= useDispatch();
+  const taggedObj = useSelector((state) => state.tagged.entries);
+  const taggedNotes = Object.values(taggedObj);
+  const tagsObj = useSelector((state) => state.tag.entries);
+  const tags = Object.values(tagsObj);
+  useEffect(() => {
+      dispatch(getAllTaggedNotes());
+  }, [dispatch]);
+
+  const matches = taggedNotes.filter((taggedNote) => taggedNote.noteId === id);
   const matchingTagIds = matches.map((match) => match.tagId);
   const matchingTags = tags.filter((tag) => matchingTagIds.includes(tag.id));
   const nonMatchingTags = tags.filter((tag) => !matchingTagIds.includes(tag.id));

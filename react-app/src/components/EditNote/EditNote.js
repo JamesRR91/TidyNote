@@ -9,9 +9,6 @@ import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import './EditNote.css';
 
-// console.log('!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!')
-// console.log(ClassicEditor.builtinPlugins.map( plugin => plugin.pluginName ));
-
 
 
 export default function EditNote({ id }) {
@@ -67,21 +64,6 @@ export default function EditNote({ id }) {
       'undo', 'redo'
     ], shouldNotGroupWhenFull: true
  };
-
-
-  // const notify = () => {
-  //   if (!name && !text && !bookId) {
-  //     toast.error("Your note needs some information!")
-  //   } else if (!name) {
-  //     toast.error("The note needs a name!");
-  //   } else if (!text) {
-  //     toast.error("The note needs some content!");
-  //   } else if (!bookId) {
-  //     toast.error("The note needs to be assigned to a book!");
-  //   } else {
-  //     toast.success("Saved!")
-  //   }
-  // }
 
   return (
     <div className='InputBox'>

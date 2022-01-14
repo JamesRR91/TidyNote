@@ -14,11 +14,6 @@ function LoginForm() {
     <Redirect to="/" />
   );
 
-//   const demoLogin = async () => {
-//     const demoUser = { credential: 'Demo-lition', password: 'password' }
-//     return dispatch(sessionActions.login(demoUser))
-// }
-
   const handleSubmit = (e) => {
     let err;
     e.preventDefault();
