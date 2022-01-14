@@ -24,7 +24,7 @@ height: 100vh;
 .sidebar-div ul{
     display: flex;
     flex-direction: column;
-     align-self: flex-start;
+    align-self: flex-start;
 }
 
 .sidebar1{
@@ -66,7 +66,7 @@ height: 100vh;
     display: flex;
     flex-direction: row;
 
-    margin-top: 10px;
+    margin: 10px;
 
 
 }
