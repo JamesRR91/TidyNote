@@ -18,7 +18,7 @@ export default function GetBooks(){
 
 
     const [openId, setOpenId]=useState(null);
-
+    console.log('THIS IS A CONSOLE LOG');
     const handleClick= (id) => {
       if (openId===id) {
         setOpenId(null)
