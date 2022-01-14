@@ -3,17 +3,18 @@ import { useEffect, useState } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 import { createTaggedNote, deleteTaggedNote } from '../../store/taggednote';
 
-export default function TaggingNotes({note_id, tag_id, tag_name, tagged}){
+export default function TaggingNotes({note_id, tag_id, tag_name, tagged, taggedNote_id}){
     const dispatch= useDispatch();
     const [used, setUsed]=useState(tagged)
 
    const removeTag=(e) => {
         e.preventDefault();
-        const newTagNote={
+        const oldTagNote={
             noteId:note_id,
-            tagId:tag_id
+            tagId:tag_id,
+            taggedId:taggedNote_id
         }
-        dispatch(deleteTaggedNote(newTagNote));
+        dispatch(deleteTaggedNote(oldTagNote));
         // setUsed(!used)
     }
 

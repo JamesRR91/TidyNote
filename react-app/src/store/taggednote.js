@@ -35,13 +35,15 @@ export const createTaggedNote = (newTaggedNote) => async (dispatch) => {
   }
 };
 
-export const deleteTaggedNote = () => async (dispatch) => {
+export const deleteTaggedNote = (oldTaggedNote) => async (dispatch) => {
   const response = await fetch(`/api/taggednotes/`, {
-    method: 'delete'
+    method: 'delete',
+    headers: { 'Content-Type': 'application/json' },
+    body: JSON.stringify(oldTaggedNote)
   });
   const taggedNote = await response.json();
   if (response.ok) {
-    dispatch(remove(taggedNote));
+    dispatch(remove(oldTaggedNote.taggedId));
   }
 };
 
@@ -58,7 +60,7 @@ const taggedNoteReducer = (state = initialState, action) => {
       return newState;
     };
     case ADD_TAGGEDNOTE: {
-      const lastId=Object.values(state.entries).length;
+      const lastId=Math.max(...Object.keys(state.entries));
       const newState = { ...state, entries: { ...state.entries, [lastId+1]: action.newTaggedNote } };
       return newState;
     };
