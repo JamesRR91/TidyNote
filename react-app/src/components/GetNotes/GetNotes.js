@@ -6,6 +6,7 @@ import PostNote from '../PostNote/PostNote';
 import EditNote from '../EditNote/EditNote'
 import DeleteNote from '../DeleteNote/DeleteNote';
 import './GetNotes.css';
+import SeeTaggedNotes from '../SeeTaggedNotes/SeeTaggedNotes';
 
 export default function GetNotes(){
     const dispatch= useDispatch();
@@ -23,6 +24,7 @@ export default function GetNotes(){
                 </div>
                 <EditNote id={id} />
                 <DeleteNote id={id} />
+                <SeeTaggedNotes id={id}/>
               </div>
             ))}
 

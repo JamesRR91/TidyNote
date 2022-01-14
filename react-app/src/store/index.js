@@ -4,12 +4,14 @@ import session from './session'
 import bookReducer from './book';
 import noteReducer from './note';
 import tagReducer from './tag';
+import taggedNoteReducer from './taggednote';
 
 const rootReducer = combineReducers({
   session,
   book: bookReducer,
   note: noteReducer,
-  tag: tagReducer
+  tag: tagReducer,
+  tagged:taggedNoteReducer
 });
 
 
