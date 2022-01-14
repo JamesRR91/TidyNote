@@ -7,14 +7,9 @@ import './PostBook.css';
 export default function PostBook(){
     const [name, setName] = useState("");
     const dispatch= useDispatch();
-    // const booksObj = useSelector((state) => state.book.entries);
-    // const books = Object.values(booksObj);
-    // useEffect(() => {
-    //     dispatch(getBooks());
-    // }, [dispatch]);
-      const reset = () => {
-        setName("");
-      };
+    const reset = () => {
+      setName("");
+    };
 
       const handleSubmit = (e) => {
         e.preventDefault();

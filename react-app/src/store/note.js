@@ -27,7 +27,6 @@ export const getAllNotes = () => async (dispatch) => {
 };
 
 export const createNote = (newNote) => async (dispatch) => {
-  // const { bookId } = newNote;
   const response = await fetch(`/api/notes/new_note`, {
     method: 'post',
     headers: { 'Content-Type': 'application/json' },
@@ -74,10 +73,6 @@ const noteReducer = (state = initialState, action) => {
   switch (action.type) {
     case LOAD_NOTES: {
       const newState = { ...state, entries: {} };
-      // action.notes.forEach((note) => {
-      // newState.entries[note.id] = note;
-      // });
-      // console.log('LIGHTS, CAMERA', action.notes);
       for (let i = 0; i < action.notes.length; i++) {
         let note = action.notes[i];
         newState.entries[note.id] = note;

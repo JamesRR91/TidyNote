@@ -38,23 +38,11 @@ def seed_taggednotes():
     db.session.add(long_term_tag)
     db.session.add(urgent_tag)
 
-    # test = tagged_notes(
-    #     tagId=1, noteId=1)
-    # groceries = tagged_notes(
-    #     tagId=2, noteId=2)
-    # goals = tagged_notes(
-    #     tagId=3, noteId=3)
-    # important = tagged_notes(
-    #     tagId=4, noteId=2)
 #tagged_notes
     test_note.tags.append(test_tag)
     produce.tags.append(shopping_tag)
     personal.tags.append(long_term_tag)
     produce.tags.append(urgent_tag)
-    # db.session.add(test)
-    # db.session.add(groceries)
-    # db.session.add(goals)
-    # db.session.add(important)
 
     db.session.commit()
 

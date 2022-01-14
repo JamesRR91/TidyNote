@@ -15,7 +15,6 @@ export default function TaggingNotes({note_id, tag_id, tag_name, tagged, taggedN
             taggedId:taggedNote_id
         }
         dispatch(deleteTaggedNote(oldTagNote));
-        // setUsed(!used)
     }
 
     const addTag=(e) => {
@@ -25,7 +24,6 @@ export default function TaggingNotes({note_id, tag_id, tag_name, tagged, taggedN
             tagId:tag_id
         }
         dispatch(createTaggedNote(newTagNote));
-        // setUsed(!used)
     }
 
     return (

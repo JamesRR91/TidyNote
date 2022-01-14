@@ -19,16 +19,10 @@ export default function PostNote(){
     useEffect(() => {
         dispatch(getBooks());
     }, [dispatch]);
-    // const firstBookId=firstBook.id;
     const [name, setName] = useState("");
     const [text, setText] = useState("");
-    // console.log('TESTING TESTING', books[0].book_name)
     const [bookId, setBookId]=useState(firstBook);
-    // const booksObj = useSelector((state) => state.book.entries);
-    // const books = Object.values(booksObj);
-    // useEffect(() => {
-    //     dispatch(getBooks());
-    // }, [dispatch]);
+
       const reset = () => {
         setName("");
         setText("");
@@ -37,18 +31,6 @@ export default function PostNote(){
 
       const handleSubmit = (e) => {
         e.preventDefault();
-
-        // if (!name) {
-        //   return alert('Your note must have a name.')
-        // }
-
-        // if(!text) {
-        //     return alert('Your note must have content.')
-        // }
-        // console.log('HERE WE GO AGAIN', bookId)
-        // if(bookId===undefined) {
-        //     return alert('Please select a notebook!')
-        // }
 
         const newNote = {
           note_name: name,
@@ -64,9 +46,7 @@ export default function PostNote(){
           'heading', '|',
           'bold', 'italic', '|',
           'link', '|',
-          // 'outdent', 'indent', '|',
           'bulletedList', 'numberedList', '|',
-          // 'code', 'codeBlock', '|',
           'insertTable', '|',
           'blockQuote', '|',
           'undo', 'redo'

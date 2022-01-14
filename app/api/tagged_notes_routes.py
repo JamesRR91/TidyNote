@@ -10,9 +10,6 @@ tagged_notes_routes = Blueprint("tagged_notes", __name__)
 @login_required
 def get_all_tagged_notes():
     all_tagged_notes = db.session.query(tagged_notes).join(Tag).filter(Tag.userId == current_user.get_id())
-#   all_tagged_notes = tagged_notes.query.join(Tag).filter(Tag.userId == current_user.get_id())
-  # all_books = Book.query.filter(Book.userId == current_user.get_id()).all()
-  # print(all_books[4].id)
     return {'all_tagged_notes': [{'tagId': tagged_note.tagId,'noteId': tagged_note.noteId} for tagged_note in all_tagged_notes]}
 # fetch('/api/taggednotes/', {method: 'Get'}).then(res => res.json()).then(data => console.log(data))
 

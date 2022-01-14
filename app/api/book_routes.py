@@ -12,8 +12,6 @@ book_routes = Blueprint("books", __name__)
 @login_required
 def get_all_books():
   all_books = Book.query.filter(Book.userId == current_user.get_id()).all()
-  # all_books = Book.query.filter(Book.userId == current_user.get_id()).all()
-  # print(all_books[4].id)
   return {'all_books': [book.to_dict() for book in all_books]}
 
 # fetch('/api/books/', {method: 'Get'}).then(res => res.json()).then(data => console.log(data));
@@ -42,10 +40,6 @@ def add_book():
 # .then(data => {
 #   console.log('Success:', data);
 # })
-
-
-  # print(all_books[4].id)
-
 
 @book_routes.route('/<int:bookId>',methods=['DELETE'])
 @login_required
