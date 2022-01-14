@@ -1,3 +1,5 @@
+
+
 import React, { useEffect, useState } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 import { updateNote } from '../../store/note';
@@ -8,6 +10,9 @@ import ClassicEditor from '@ckeditor/ckeditor5-build-classic';
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import './EditNote.css';
+
+// console.log('!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!')
+// console.log(ClassicEditor.builtinPlugins.map( plugin => plugin.pluginName ));
 
 
 
@@ -29,16 +34,16 @@ export default function EditNote({ id }) {
   const handleSubmit = (e) => {
     e.preventDefault();
 
-    if (!name && !text && !bookId) {
-      toast.error("Your note needs some information!")
-    } else if (!name) {
-      toast.error("The note needs a name!");
-    } else if (!text) {
-      toast.error("The note needs some content!");
-    } else if (!bookId) {
-      toast.error("The note needs to be assigned to a book!");
-    } else {
-      toast.success("Saved!")
+    if (!name) {
+      return alert('Your note must have a name.')
+    }
+
+    if(!text) {
+        return alert('Your note must have content.')
+    }
+    console.log('HERE WE GO AGAIN', bookId)
+    if(bookId===undefined) {
+        return alert('Please select a notebook!')
     }
 
 
@@ -65,6 +70,21 @@ export default function EditNote({ id }) {
     ], shouldNotGroupWhenFull: true
  };
 
+
+  // const notify = () => {
+  //   if (!name && !text && !bookId) {
+  //     toast.error("Your note needs some information!")
+  //   } else if (!name) {
+  //     toast.error("The note needs a name!");
+  //   } else if (!text) {
+  //     toast.error("The note needs some content!");
+  //   } else if (!bookId) {
+  //     toast.error("The note needs to be assigned to a book!");
+  //   } else {
+  //     toast.success("Saved!")
+  //   }
+  // }
+
   return (
     <div className='InputBox'>
       <form  onSubmit={handleSubmit}>
@@ -73,6 +93,7 @@ export default function EditNote({ id }) {
           onChange={(e) => setName(e.target.value)}
           value={name}
           text='name'
+          required
         />
         <CKEditor className='input-data'
             editor={ClassicEditor}
@@ -84,6 +105,7 @@ export default function EditNote({ id }) {
             setText(data)
 
             }}
+            required
         />
         <div className='makerow'>
         <select className='input-data'
@@ -99,15 +121,6 @@ export default function EditNote({ id }) {
         </select>
 
         <button onClick={handleSubmit} className='delete-button' type="submit">Edit</button>
-            <ToastContainer
-              theme='colored'
-              position="top-right"
-              autoClose={5000}
-              hideProgressBar={false}
-              newestOnTop={false}
-              closeOnClick
-              rtl={false}
-              />
         </div>
       </form>
     </div>
