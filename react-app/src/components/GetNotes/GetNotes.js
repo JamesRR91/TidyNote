@@ -31,10 +31,6 @@ export default function GetNotes(){
        filteredNoteIds=filteredTagNotes.map(note => note.noteId)
        filteredNotes=notes.filter(note => filteredNoteIds.includes(note.id))
     }
-    console.log('IS THIS SHIT A TAG ID', typeof(tagId))
-    console.log('YOU BETTER BE FILTERING', filteredTagNotes)
-    console.log('OR ELSE, I MEAN IT', filteredNoteIds)
-    console.log('WORK PLEASE WORK', filteredNotes);
 
     useEffect(() => {
         dispatch(getAllNotes());
