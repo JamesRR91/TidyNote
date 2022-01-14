@@ -31,14 +31,14 @@ function App() {
     <BrowserRouter>
       <NavBar loaded={loaded}/>
       <Switch>
-        <Route path='/'>
-          <Splash />
-        </Route>
         <Route path='/login' exact={true}>
           <LoginForm />
         </Route>
         <Route path='/sign-up' exact={true}>
           <SignUpForm />
+        </Route>
+        <Route path='/'>
+          <Splash />
         </Route>
         <ProtectedRoute path='/' exact={true} >
           <h1>My Home Page</h1>
