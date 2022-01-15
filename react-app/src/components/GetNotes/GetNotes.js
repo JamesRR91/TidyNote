@@ -39,7 +39,7 @@ export default function GetNotes(){
     return(
         <div className="get-notes-parent">
 
-            {filteredNotes ? filteredNotes.map(({ id, note_name, note_text}) => (
+            {filteredNotes.length ? filteredNotes.map(({ id, note_name, note_text}) => (
               <div className='note' key={id}>
                 <div className='note-name'>
                   Name of The Note : {note_name}
@@ -50,7 +50,7 @@ export default function GetNotes(){
                   <SeeTaggedNotes id={id}/>
                 </div>
               </div>
-            )): <div className='no-note-found'><p>You have no notes, please create one</p></div>}
+            )): <div className='no-note-found'><h3>This book/tag has no associated notes, please make one above.</h3></div>}
 
         </div>
     )
