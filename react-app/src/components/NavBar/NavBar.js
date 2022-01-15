@@ -3,6 +3,7 @@ import React from 'react';
 import { useSelector } from 'react-redux';
 import { NavLink } from 'react-router-dom';
 import LogoutButton from '../auth/LogoutButton';
+import ProfileButton from './ProfileButton.js'
 import "./NavBar.css"
 
 const NavBar = ({loaded}) => {
@@ -12,8 +13,8 @@ const NavBar = ({loaded}) => {
   if (sessionUser) {
     sessionLinks = (
       <li>
-            <div id="logoutButton">
-                <LogoutButton />
+            <div id="profileButton">
+                <ProfileButton user={sessionUser}/>
             </div>
           </li>
     );

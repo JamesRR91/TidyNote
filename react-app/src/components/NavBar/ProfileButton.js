@@ -5,6 +5,7 @@ import * as sessionActions from '../../store/session';
 import './ProfileButton.css'
 
 function ProfileButton({ user }) {
+    console.log(user)
     const dispatch = useDispatch();
     const [showMenu, setShowMenu] = useState(false);
     const history = useHistory();
@@ -27,8 +28,9 @@ function ProfileButton({ user }) {
     }
     return (
         <div className='center-profile'>
+          <span className='welcome-message'>{`Welcome, ${user.username}!`}</span>
           <button onClick={openMenu}>
-            <i className="fas fa-coffee"></i>
+            <i className="fas fa-user"></i>
           </button>
           {showMenu && (
             <ul className="profile-dropdown">

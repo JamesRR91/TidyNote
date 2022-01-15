@@ -1,10 +1,19 @@
 .profile-list-item {
     border-radius: 1px;
-    border-style: ridge;
+    /* border-style: ridge; */
     font-weight: bold;
 }
 
 .profile-dropdown {
     font-weight: bold;
+    height: 20px;
 }
 
+.profile-button ul {
+    display: flex;
+    flex-direction: column;
+}
+
+.welcome-message {
+    margin-right: 5px;
+}

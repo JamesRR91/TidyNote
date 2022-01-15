@@ -60,8 +60,11 @@ height: 100vh;
 
     border-radius: 20px;
     background-color: lightblue;
+    background-image: url('/src/images/background.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover; 
 }
-
 .sidebar{
     display: flex;
     flex-direction: row;
