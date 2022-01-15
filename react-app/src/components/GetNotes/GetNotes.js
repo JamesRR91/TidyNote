@@ -10,6 +10,7 @@ import SeeTaggedNotes from '../SeeTaggedNotes/SeeTaggedNotes';
 import { useParams } from 'react-router-dom';
 import { getAllTaggedNotes } from '../../store/taggednote';
 
+
 export default function GetNotes(){
     const dispatch= useDispatch();
     const { bookId }=useParams();
@@ -37,7 +38,8 @@ export default function GetNotes(){
     }, [dispatch]);
     return(
         <div className="get-notes-parent">
-            {filteredNotes && filteredNotes.map(({ id, note_name, note_text}) => (
+
+            {filteredNotes ? filteredNotes.map(({ id, note_name, note_text}) => (
               <div className='note' key={id}>
                 <div className='note-name'>
                   Name of The Note : {note_name}
@@ -48,7 +50,7 @@ export default function GetNotes(){
                   <SeeTaggedNotes id={id}/>
                 </div>
               </div>
-            ))}
+            )): <div className='no-note-found'><p>You have no notes, please create one</p></div>}
 
         </div>
     )
