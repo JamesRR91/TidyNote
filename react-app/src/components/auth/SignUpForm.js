@@ -20,6 +20,8 @@ const SignUpForm = () => {
       if (data) {
         setErrors(data)
       }
+    } else {
+      alert("Passwords don't match");
     }
   };
 
@@ -42,6 +44,12 @@ const SignUpForm = () => {
   if (user) {
     return <Redirect to='/' />;
   }
+  // if (password.length != 0) {
+  //   if(password != repeatPassword) {
+  //     return alert('Passwords do not match.')
+  //   }
+  // }
+
 
   return (
     <div className='form-container'>
