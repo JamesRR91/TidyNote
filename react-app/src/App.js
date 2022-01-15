@@ -10,6 +10,7 @@ import User from './components/User';
 import { authenticate } from './store/session';
 import './App.css';
 import Splash from './components/Splash'
+import Footer from './components/Footer/Footer'
 
 
 function App() {
@@ -44,6 +45,7 @@ function App() {
           <h1>My Home Page</h1>
         </ProtectedRoute>
       </Switch>
+      {/* <Footer /> */}
     </BrowserRouter>
   );
 }
