@@ -1,6 +1,10 @@
-.tag{
+.tag-l{
     text-align: center;
     display: flex;
     flex-direction: column;
     color: white;
+}
+
+.tag-button{
+    font-weight: bold;
 }

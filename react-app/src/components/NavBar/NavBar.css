@@ -1,34 +1,26 @@
 .nav-container {
-    margin: 10px;
+    /* margin: 10px; */
     background-color: rgba(255, 255, 255, 0.849);
     display: flex;
     flex-direction: row;
+    width: 98%;
     height: 50px;
     top: 0px;
     left: 0px;
     box-shadow: 1px 1px 8px rgba(112, 111, 111, 0.356);
     justify-content: space-between;
     align-items: center;
-    margin-left: 30px;
-    z-index: 1;
 }
 
 .nav-container ul {
-  z-index: 1;
   display: flex;
   flex-direction: row;
   justify-content:space-between;
   align-items: center;
   text-align: center;
   list-style-type: none;
-
   }
 
-
-
-#logoutButton {
-  background-color: green;
-}
 
 .login{
   display: flex;
