@@ -16,3 +16,8 @@
 .note-name{font-size: 25px;
     font-weight: bold;
 }
+
+.makerow{
+    display: flex;
+    flex-direction: row;
+}

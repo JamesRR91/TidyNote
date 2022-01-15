@@ -42,11 +42,11 @@ export default function GetNotes(){
                 <div className='note-name'>
                   Name of The Note : {note_name}
                 </div>
-                <div >
+                <div>
                   <EditNote id={id} />
-                  <DeleteNote id={id} />
-                  <SeeTaggedNotes id={id}/>
+                  {/* <DeleteNote id={id} /> */}
                 </div>
+                  <SeeTaggedNotes id={id}/>
               </div>
             ))}
 

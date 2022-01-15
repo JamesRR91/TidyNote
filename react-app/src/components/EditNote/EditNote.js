@@ -12,6 +12,8 @@ import 'react-toastify/dist/ReactToastify.css';
 import './EditNote.css';
 import Footer from '../Footer/Footer'
 
+import DeleteNote from '../DeleteNote/DeleteNote';
+
 // console.log('!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!')
 // console.log(ClassicEditor.builtinPlugins.map( plugin => plugin.pluginName ));
 
@@ -108,7 +110,8 @@ export default function EditNote({ id }) {
             }}
             required
         />
-        <div className='makerow'>
+        {/* <div className='makerow'> */}
+        <div className='editing-note-bar'>
         <select className='input-data'
           onChange={(e) => setBookId(e.target.value)}
           value={bookId}
@@ -122,6 +125,7 @@ export default function EditNote({ id }) {
         </select>
 
         <button onClick={handleSubmit} className='delete-button' type="submit">Edit</button>
+        <DeleteNote id={id} />
         </div>
       </form>
     </div>
