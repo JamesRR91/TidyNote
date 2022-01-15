@@ -40,7 +40,7 @@ export default function GetNotes(){
             {filteredNotes && filteredNotes.map(({ id, note_name, note_text}) => (
               <div className='note' key={id}>
                 <div className='note-name'>
-                  Name of The Note : {note_name}
+                  {note_name}
                 </div>
                 <div>
                   <EditNote id={id} />
