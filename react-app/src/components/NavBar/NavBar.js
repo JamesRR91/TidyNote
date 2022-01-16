@@ -21,16 +21,16 @@ const NavBar = ({loaded}) => {
   } else {
     sessionLinks = (
       <>
-        <li>
+        <div className='login-button'>
           <NavLink className="login" to='/login' exact={true} activeClassName='active'>
               Login
           </NavLink>
-        </li>
-        <li>
+        </div>
+        <div className='login-button'>
             <NavLink className="signup" to='/sign-up' exact={true} activeClassName='active'>
               Sign Up
             </NavLink>
-        </li>
+        </div>
       </>
     );
   }

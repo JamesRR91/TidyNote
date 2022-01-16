@@ -6,7 +6,7 @@
 .note{
     display: inline-block;
     width: 40%;
-    margin:25px;
+   margin-top: 25px;
     background-color:  rgb(15, 89, 119);
     padding: 20px;
     border-radius: 20px;

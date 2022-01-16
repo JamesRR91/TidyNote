@@ -58,7 +58,7 @@ height: 100vh;
     align-content: center; */
     margin-right: 10px;
     border: 5px solid white;
-    width: 72.4%;
+    width: 71%;
     margin-left: 15px;
     /* padding-top: 10vh; */
 
@@ -69,6 +69,8 @@ height: 100vh;
     background-repeat: no-repeat;
     background-size: cover;
 }
+
+
 .sidebar{
     display: flex;
     flex-direction: row;

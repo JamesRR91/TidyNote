@@ -5,4 +5,14 @@
 
 .input-bar{
     margin-top: 10px;
+    width: 80px;
+    height: 25px;
+}
+
+.edit-button{
+    padding: 5px;
+    border-radius: 10px;
+    margin: 10px;
+    background-color: white;
+    font-weight: bold;
 }

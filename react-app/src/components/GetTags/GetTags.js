@@ -28,11 +28,11 @@ export default function GetTags(){
 
             {tags.map(({ id, tag_name }) => (
                 <div className='book' key={id}>
-                    <div className='tag'>
+
                     <NavLink to={`/tags/${id}`}>
-                        <button className='tag-button' onClick={() => handleClick(id)}>{tag_name}</button>
+                      <button className='tag-button' onClick={() => handleClick(id)}>{tag_name}</button>
                     </NavLink>
-                    </div>
+
                     <div className='makerow'>
                     {
                         openId===id?<EditTag id = {id}/>:null
