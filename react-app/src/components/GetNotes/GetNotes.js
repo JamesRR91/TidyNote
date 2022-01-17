@@ -37,7 +37,7 @@ export default function GetNotes(){
     }, [dispatch]);
     return(
         <div className="get-notes-parent">
-            {filteredNotes && filteredNotes.map(({ id, note_name, note_text}) => (
+            {filteredNotes?.length ? filteredNotes.map(({ id, note_name, note_text}) => (
               <div className='note' key={id}>
                 <div className='note-name'>
                   {note_name}
@@ -48,7 +48,7 @@ export default function GetNotes(){
                 </div>
                   <SeeTaggedNotes id={id}/>
               </div>
-            ))}
+            )): <div className='no-note-parent'><h3 className='no-note'>This book/tag has no associated notes, please make one above.</h3></div>}
 
         </div>
     )
