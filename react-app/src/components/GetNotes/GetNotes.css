@@ -23,3 +23,26 @@
     display: flex;
     flex-direction: row;
 }
+
+.no-note {
+    display: flex;
+    align-self: center;
+    width: 40%;
+    background-color:  rgb(15, 89, 119);
+    padding: 15px;
+    padding-left: 50px;
+    border-radius: 20px;
+    text-align: center;
+    /* margin-right: 70px; */
+    margin-left: 30%
+}
+
+.no-note-parent {
+    display: flex;
+    flex-direction: row;
+    width: 40%;
+    background-color:  rgb(15, 89, 119);
+    text-align: center;
+    margin-left: 27%;
+    border-radius: 20px;
+}

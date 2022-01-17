@@ -48,7 +48,7 @@ export default function GetNotes(){
                 </div>
                   <SeeTaggedNotes id={id}/>
               </div>
-            )): <h3>This book/tag has no associated notes, please make one above.</h3>}
+            )): <div className='no-note-parent'><h3 className='no-note'>This book/tag has no associated notes, please make one above.</h3></div>}
 
         </div>
     )
