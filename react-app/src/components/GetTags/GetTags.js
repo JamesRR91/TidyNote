@@ -25,10 +25,8 @@ export default function GetTags(){
       }
     return(
         <div className="get-tags-parent">
-
             {tags.map(({ id, tag_name }) => (
                 <div className='book' key={id}>
-
                     <NavLink to={`/tags/${id}`}>
                       <button className='tag-button' onClick={() => handleClick(id)}>{tag_name}</button>
                     </NavLink>
@@ -43,7 +41,6 @@ export default function GetTags(){
                     </div>
                 </div>
             ))}
-
         </div>
     )
 }
