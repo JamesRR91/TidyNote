@@ -39,7 +39,7 @@ export default function GetNotes(){
     return(
         <div className="get-notes-parent">
 
-            {filteredNotes.length ? filteredNotes.map(({ id, note_name, note_text}) => (
+            {filteredNotes?.length ? filteredNotes.map(({ id, note_name, note_text}) => (
               <div className='note' key={id}>
                 <div className='note-name'>
                   Name of The Note : {note_name}
