@@ -15,16 +15,17 @@
 }
 
 .nav-container ul {
-  z-index: 1;
   display: flex;
   flex-direction: row;
   justify-content:space-between;
   align-items: center;
   text-align: center;
   list-style-type: none;
-
+  width: 100%;
   }
-
+.login-button{
+  margin-right: 50px;
+}
 
 
 #logoutButton {
@@ -34,6 +35,7 @@
 .login{
   display: flex;
   /* margin-left: 1100px; */
+  margin-left: 1000px;
   text-decoration: none;
   background-color: rgb(15, 89, 119);
   color: white;

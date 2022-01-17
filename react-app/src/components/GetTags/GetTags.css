@@ -1,5 +1,5 @@
 .tag{
-    text-align: center;
+    align-items: center;
     display: flex;
     flex-direction: column;
     color: white;
@@ -7,19 +7,26 @@
 }
 
 .get-tags-parent{
+
     margin: 30px;
     align-items: center;
     color: white;
     border-radius: 10px;
-    background-image: url('/src/images/tags.jpg');
+    background-image: url('/src/images/tags.png');
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
+
 }
 
+
+
 .tag-button{
+    background-color: white;
+    color: black;
     padding: 5px;
     font-weight: bold;
     font-size: 15px;
     border-radius: 5px;
+    opacity: 1;
 }
