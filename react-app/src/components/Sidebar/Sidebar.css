@@ -87,3 +87,7 @@ height: 100vh;
 .tag{
     display: flex;
 }
+
+.book-title {
+    align-self: center;
+}

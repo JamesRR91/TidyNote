@@ -13,15 +13,15 @@ export default function Sidebar(){
     return(
         <div className="sidebar">
             <div className="sidebar1">
-                <h3 className="book-title">Books</h3>
+                <h3 className="book-title">My Books</h3>
                 <PostBook />
                 <GetBooks />
-                <h3 className="tag-title">Tags</h3>
+                <h3 className="book-title">My Tags</h3>
                 <PostTag />
                 <GetTags />
             </div>
             <div className="sidebar2">
-            <h3 className="book-title">Notes</h3>
+            <h3 className="book-title">My Notes</h3>
             <PostNote />
             <Switch>
                 <Route path='/' exact>
