@@ -48,4 +48,4 @@ Rich-text editing allows users to view their Note's styling and formatting as it
 
 -- [MVP List](https://github.com/JamesRR91/TidyNote/wiki/MVP-LIST)
 
--- [User Stories] (https://github.com/JamesRR91/TidyNote/wiki/User-Stories)
+-- [User Stories](https://github.com/JamesRR91/TidyNote/wiki/User-Stories)
