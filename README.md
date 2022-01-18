@@ -43,4 +43,6 @@ Users can create and delete Tags as well as add or remove them from Notes.
 Rich-text editing allows users to view their Note's styling and formatting as it will appear in its final form.
 
 ## Useful Links
--[Database Diagram](https://github.com/JamesRR91/TidyNote/wiki/Database-Schema)
+-- [Database Diagram](https://github.com/JamesRR91/TidyNote/wiki/Database-Schema)
+-- [MVP List](https://github.com/JamesRR91/TidyNote/wiki/MVP-LIST)
+-- [User Stories] (https://github.com/JamesRR91/TidyNote/wiki/User-Stories)
