@@ -1,8 +1,8 @@
-# Flask React Project
+# Welcome to Tidy-Note
 
-This is the starter for the Flask React project.
+Welcome to Tidy-Note, a clone of Evernote with CRUD operations to keep track of all your notes.
 
-## Getting started
+##Summary
 
 1. Clone this repository (only this branch)
 
