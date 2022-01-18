@@ -3,7 +3,7 @@
 Welcome to Tidy-Note, a clone of the popular note-taking app, Evernote with CRUD operations to keep track of all your notes.
 
 ## Live-link : 
-   TidyNote(https://tidynote-flask-app.herokuapp.com/)
+   [TidyNote](https://tidynote-flask-app.herokuapp.com/)
 
 ## Summary :
 
