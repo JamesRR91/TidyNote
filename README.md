@@ -20,10 +20,10 @@ TidyNote is a single-page note-taking app that features a rich-text editor, imag
 ![Express.js](https://img.shields.io/badge/express.js-%23404d59.svg?style=for-the-badge&logo=express&logoColor=%2361DAFB)
 ![Postgres](https://img.shields.io/badge/postgres-%23316192.svg?style=for-the-badge&logo=postgresql&logoColor=white)
 
-# Splash Page
+## Splash Page
 
 ![Screenshot (676)](https://user-images.githubusercontent.com/45556028/149858223-fc1c3a73-fec6-414f-8830-b33f0b65084c.png)
 
-# Home Page
+## Home Page
 
 ![Screenshot (677)](https://user-images.githubusercontent.com/45556028/149858281-cd4422fd-a319-4f9c-8d0f-bd1778b8cada.png)
