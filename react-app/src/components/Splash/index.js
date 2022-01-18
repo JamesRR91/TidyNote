@@ -22,7 +22,7 @@ export default function Splash() {
           </div>
           <div className='SplashBox2'>
             <img
-              src='https://cdn.discordapp.com/attachments/536996013911572484/930289688286220288/favcon.png'
+              src='https://cdn.discordapp.com/attachments/536996013911572484/930286778064187472/favcon.png'
               alt='green'
               className='image'
             ></img>
