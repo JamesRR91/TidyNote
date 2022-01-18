@@ -45,5 +45,7 @@ Rich-text editing allows users to view their Note's styling and formatting as it
 
 ## Useful Links
 -- [Database Diagram](https://github.com/JamesRR91/TidyNote/wiki/Database-Schema)
+
 -- [MVP List](https://github.com/JamesRR91/TidyNote/wiki/MVP-LIST)
+
 -- [User Stories] (https://github.com/JamesRR91/TidyNote/wiki/User-Stories)
