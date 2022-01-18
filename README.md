@@ -19,6 +19,7 @@ TidyNote is a single-page note-taking app that features a rich-text editor, imag
 ## Backend Technologies Used
 ![Flask](https://img.shields.io/badge/flask-%23000.svg?style=for-the-badge&logo=flask&logoColor=white)
 ![Postgres](https://img.shields.io/badge/postgres-%23316192.svg?style=for-the-badge&logo=postgresql&logoColor=white)
+![SQLAlchemy](https://img.shields.io/badge/SA-SQLAlchemy-red)
 
 ## Splash Page
 
