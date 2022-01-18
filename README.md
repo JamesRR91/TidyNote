@@ -27,3 +27,19 @@ TidyNote is a single-page note-taking app that features a rich-text editor, imag
 ## Home Page
 
 ![Screenshot (677)](https://user-images.githubusercontent.com/45556028/149858281-cd4422fd-a319-4f9c-8d0f-bd1778b8cada.png)
+
+## Features
+
+#### 1.Books
+ Users can save Notes in collections called Books. Users can create, edit, and delete Books
+
+#### 2.Notes
+ Users can create, edit, and delete Notes.
+ 
+#### 3.Tags
+Users can create and delete Tags as well as add or remove them from Notes.
+
+#### 4.RICH-TEXT EDITING
+Rich-text editing allows users to view their Note's styling and formatting as it will appear in its final form.
+
+
