@@ -2,7 +2,7 @@
 
 Welcome to Tidy-Note, a clone of Evernote with CRUD operations to keep track of all your notes.
 
-##Summary
+## Summary
 
 1. Clone this repository (only this branch)
 
