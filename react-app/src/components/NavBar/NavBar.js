@@ -21,29 +21,38 @@ const NavBar = ({loaded}) => {
   } else {
     sessionLinks = (
       <>
-        <div className='login-button'>
-          <NavLink className="login" to='/login' exact={true} activeClassName='active'>
-              Login
-          </NavLink>
-        </div>
-        <div className='login-button'>
-            <NavLink className="signup" to='/sign-up' exact={true} activeClassName='active'>
-              Sign Up
+
+          {/* <div className='login-button'>
+            <NavLink className="login" to='/login' exact={true} activeClassName='active'>
+                Login
             </NavLink>
-        </div>
+          </div>
+          <div className='login-button'>
+              <NavLink className="signup" to='/sign-up' exact={true} activeClassName='active'>
+                Sign Up
+              </NavLink>
+          </div> */}
+
       </>
     );
   }
   return (
     <div className="nav-container">
       <nav>
-        <ul>
+        <ul className='gap' >
           <li>
             <NavLink className="home-nav" to='/' exact={true} activeClassName='active'>
               TidyNote
             </NavLink>
           </li>
-          {loaded && sessionLinks}
+            <div className='login-button'>
+              <NavLink className="login" to='/login' exact={true} activeClassName='active'>
+                  Login
+              </NavLink>
+              <NavLink className="signup" to='/sign-up' exact={true} activeClassName='active'>
+                  Sign Up
+              </NavLink>
+            </div>
         </ul>
       </nav>
     </div>
