@@ -1,18 +1,23 @@
 .get-notes-parent{
     color: white;
-
+    align-items: center;
+    align-content: center;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
 }
 
 .note{
     display: inline-block;
-    width: 40%;
-   margin-top: 25px;
+    width: 45%;
+    margin: 25px;
     background-color:  rgb(15, 89, 119);
     padding: 20px;
     border-radius: 20px;
     text-align: center;
     /* margin-right: 70px; */
-    margin-left: 55px;
+    /* margin-left: 55px; */
 }
 
 .note-name{font-size: 25px;
@@ -43,6 +48,6 @@
     width: 40%;
     background-color:  rgb(15, 89, 119);
     text-align: center;
-    margin-left: 27%;
+    /* margin-left: 27%; */
     border-radius: 20px;
 }
