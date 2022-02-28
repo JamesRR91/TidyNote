@@ -1,16 +1,15 @@
-/* .nav-container {
+.nav-container {
     margin: 10px;
     background-color: rgba(255, 255, 255, 0.849);
     display: flex;
     flex-direction: row;
     height: 50px;
     top: 0px;
-    left: 00px;
+    left: 0px;
     box-shadow: 1px 1px 8px rgba(112, 111, 111, 0.356);
     justify-content: space-between;
     align-items: center;
     z-index: 1;
-
 }
 
 .nav-container ul {
@@ -20,17 +19,61 @@
   align-items: center;
   text-align: center;
   list-style-type: none;
-
-
+  width: 100%;
   }
 .login-button{
-
-  justify-content:space-between;
-
-  display: flex;
-  flex-direction: row;
+  margin-right: 50px;
 }
 
 
 #logoutButton {
+}
+
+.login{
+  display: flex;
+  margin-left: 1000px;
+  text-decoration: none;
+  background-color: rgb(15, 89, 119);
+  color: white;
+  font-weight: bold;
+  padding: 10px;
+  padding-top: 4px;
+  margin-top: 8px;
+  margin-bottom: 5px;
+  display: flex;
+  justify-content: center;
+  height: 20px;
+  width: 70px;
+  border-radius: 20px;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+.signup{
+  text-decoration: none;
+  background-color: rgb(15, 89, 119);
+  color: white;
+  font-weight: bold;
+  padding: 10px;
+  padding-top: 4px;
+  display: flex;
+  justify-content: center;
+  height: 20px;
+  width: 70px;
+  margin-top: 8px;
+  margin-bottom: 5px;
+  border-radius: 20px;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+.home-nav{
+  text-decoration: none;
+  background-color: rgb(15, 89, 119);
+  color: white;
+  display: flex;
+  justify-content: center;
+  border-radius: 20px;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+#profileButton {
+  text-align: right;
 }
