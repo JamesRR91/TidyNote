@@ -46,7 +46,7 @@ height: 100vh;
     box-shadow: 1px 1px 8px rgb(112 111 111 / 36%);
     border-radius: 20px;
     background-color: lightblue;
-    padding: 20px;
+    padding-top: 20px;
 }
 
 .sidebar2 {
@@ -82,9 +82,13 @@ height: 100vh;
 
 
 }
-.makerow{
+.makerow {
     display: flex;
     flex-direction: row;
+    align-content: center;
+    justify-content: space-between;
+    align-items: baseline;
+    flex-wrap: nowrap;
 }
 
 .tag{

@@ -10,7 +10,7 @@
     justify-content: center;
 }
 
-
-/* .fas fa-tag{
-    margin-right:80px;
-} */
+.fa-tag:before {
+    content: "\f02b";
+    padding-right: 10px;
+}
