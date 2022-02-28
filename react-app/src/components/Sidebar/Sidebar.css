@@ -38,12 +38,12 @@ height: 100vh;
     align-self: center;
     align-content: center; */
     width: 20%;
-    border: 5px solid white;
+    /* border: 5px solid white; */
 
 
     /* margin-left: 30px; */
     /* padding-top: 10vh; */
-
+    box-shadow: 1px 1px 8px rgb(112 111 111 / 36%);
     border-radius: 20px;
     background-color: lightblue;
     padding: 20px;
@@ -56,9 +56,10 @@ height: 100vh;
     /* justify-self: center;
     align-self: center;
     align-content: center; */
-    margin-right: 10px;
-    border: 5px solid white;
-    width: 71%;
+    /* margin-right: 10px; */
+    /* border: 5px solid white; */
+    box-shadow: 1px 1px 8px rgb(112 111 111 / 36%);
+    width: 100%;
     margin-left: 15px;
     /* padding-top: 10vh; */
 
@@ -69,6 +70,8 @@ height: 100vh;
     background-repeat: no-repeat;
     background-size: cover;
 }
+
+
 
 
 .sidebar{
