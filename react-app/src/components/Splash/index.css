@@ -32,12 +32,11 @@
 
 }
 .image{
-    width: 25%;
+    width: 30%;
     height: 50%;
-    margin-bottom: 150px;
-    margin-left: 100px;
-
-
+    margin-bottom: 200px;
+    margin-left: 90px;
+    border-radius: 50%;
 
 }
 .SplashBox2{
