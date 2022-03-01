@@ -35,8 +35,8 @@ const NavBar = ({loaded}) => {
   }
   return (
     <div className="nav-container">
-      <nav>
-        <ul>
+      {/* <nav>
+        <ul className="allThree">
           <li>
             <NavLink className="home-nav" to='/' exact={true} activeClassName='active'>
               TidyNote
@@ -44,7 +44,13 @@ const NavBar = ({loaded}) => {
           </li>
           {loaded && sessionLinks}
         </ul>
-      </nav>
+      </nav> */}
+      <div className="allThree">
+            <NavLink className="home-nav" to='/' exact={true} activeClassName='active'>
+              TidyNote
+            </NavLink>
+            {loaded && sessionLinks}
+      </div>
     </div>
   );
 }

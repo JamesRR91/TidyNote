@@ -28,11 +28,14 @@ function ProfileButton({ user }) {
     }
     return (
         <div className='center-profile'>
-          <span className='welcome-message'>{`Welcome, ${user.username}!`}</span>
-          <button onClick={openMenu}>
+          <div className='welcome-message'>{`Welcome, ${user.username}!`}</div>
+          {/* <button onClick={openMenu}>
             <i className="fas fa-user"></i>
-          </button>
-          {showMenu && (
+          </button> */}
+          <li>
+            <button className='logout-button'onClick={logout}>Log Out</button>
+          </li>
+          {/* {showMenu && (
             <ul className="profile-dropdown">
               <li className='profile-list-item'>Username:{user.username}</li>
               <li className='profile-list-item'>Email:{user.email}</li>
@@ -40,7 +43,7 @@ function ProfileButton({ user }) {
                 <button className='logout-button'onClick={logout}>Log Out</button>
               </li>
             </ul>
-          )}
+          )} */}
         </div>
       );
 }
