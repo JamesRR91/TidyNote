@@ -16,7 +16,7 @@ export default function Sidebar(){
                 <h3 className="book-title">My Books</h3>
                 <PostBook />
                 <GetBooks />
-                <h3 className="book-title">My Tags</h3>
+                <h3 className="book-title-tags">My Tags</h3>
                 <PostTag />
                 <GetTags />
             </div>

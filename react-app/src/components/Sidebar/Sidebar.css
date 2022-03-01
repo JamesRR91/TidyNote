@@ -95,3 +95,8 @@ height: 100vh;
 .book-title {
     align-self: center;
 }
+
+.book-title-tags {
+    align-self: center;
+    margin-top: 20px;
+}
