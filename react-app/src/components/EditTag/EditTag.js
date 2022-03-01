@@ -3,6 +3,7 @@ import { useSelector ,useDispatch } from 'react-redux';
 import { updateTag } from "../../store/tag";
 import { useHistory } from 'react-router-dom';
 import './EditTag.css'
+import { RiSave3Fill } from 'react-icons/ri';
 
 export default function EditTag({id}){
 
@@ -37,7 +38,7 @@ export default function EditTag({id}){
                 name="name"
                 autocomplete="off"
                 />
-                <button type="submit" className="edit-button" >Edit</button>
+                <button type="submit" className="edit-button" ><RiSave3Fill size='25px'/></button>
             </form>
         </div>
     )
