@@ -10,7 +10,7 @@ function Footer() {
             <a className='gl-links' href='https://github.com/andrwtran'>
               <img
                 className='links-logo-1'
-                src='https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png'
+                src='https://logos-download.com/wp-content/uploads/2016/09/GitHub_logo.png'
                 alt='Github logo'
               />
             </a>
@@ -24,7 +24,7 @@ function Footer() {
             <a className='gl-links' href='https://github.com/JamesRR91'>
               <img
                 className='links-logo-2'
-                src='https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png'
+                src='https://logos-download.com/wp-content/uploads/2016/09/GitHub_logo.png'
                 alt='Github logo'
               />
             </a>
@@ -38,7 +38,7 @@ function Footer() {
             <a className='gl-links' href='https://github.com/NawalJAhmed'>
               <img
                 className='links-logo-3'
-                src='https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png'
+                src='https://logos-download.com/wp-content/uploads/2016/09/GitHub_logo.png'
                 alt='Github logo'
               />
             </a>
@@ -52,7 +52,7 @@ function Footer() {
             <a className='gl-links' href='https://github.com/Sumit-dey'>
               <img
                 className='links-logo-4'
-                src='https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png'
+                src='https://logos-download.com/wp-content/uploads/2016/09/GitHub_logo.png'
                 alt='Github logo'
               />
             </a>
