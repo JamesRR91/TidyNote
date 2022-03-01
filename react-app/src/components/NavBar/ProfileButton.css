@@ -1,22 +1,18 @@
 .profile-list-item {
     border-radius: 1px;
     font-weight: bold;
-    color: #fff;
 }
 
 .profile-dropdown {
     font-weight: bold;
     height: 20px;
-    color: #fff;
 }
 
 .profile-button ul {
     display: flex;
     flex-direction: column;
-    color: #fff;
 }
 
 .welcome-message {
     margin-right: 5px;
-    color: #fff;
 }

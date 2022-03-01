@@ -9,7 +9,7 @@
 }
 
 .PostNote{
-   background-color: #6a994e;
+   background-color: rgb(15, 89, 119);
    padding: 40px;
    padding-top:10px;
    padding-bottom:10px;
@@ -59,7 +59,7 @@
   font-family: "Roboto", sans-serif;
   text-transform: uppercase;
   outline: 0;
-  background: #4CAF50;
+  background: #0f5977;
   width: 40px;
   border: 0;
   /* padding: 15px; */
