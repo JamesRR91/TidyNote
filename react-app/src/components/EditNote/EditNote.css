@@ -1,8 +1,14 @@
 .ck-editor__editable_inline {
-
     color:black;
     height: 300px;
-
-
   }
 
+  .editing-note-bar{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    align-content: center;
+    justify-content: center;
+    align-items: center;
+    margin-top: 10px;
+  }
