@@ -46,7 +46,7 @@ height: 100vh;
     box-shadow: 1px 1px 8px rgb(112 111 111 / 36%);
     border-radius: 10px;
     background-color: lightblue;
-    /* background-image: linear-gradient(to top, #0091c0, #47a3c9, #6cb5d2, #8dc6db, #add8e6); */
+    background-image: linear-gradient(to top, #0091c0, #47a3c9, #6cb5d2, #8dc6db, #add8e6);
     padding-top: 20px;
 }
 
@@ -65,8 +65,8 @@ height: 100vh;
     /* padding-top: 10vh; */
 
     border-radius: 10px;
-    background-color: lightblue;
-    /* background-image: linear-gradient(to top, #0091c0, #47a3c9, #6cb5d2, #8dc6db, #add8e6); */
+    background-color: rgb(173, 216, 230);
+    background-image: linear-gradient(to top, #0091c0, #47a3c9, #6cb5d2, #8dc6db, #add8e6);
     /* background-image: url('/src/images/background.png'); */
     background-position: center;
     background-repeat: no-repeat;
