@@ -44,7 +44,7 @@ export default function PostNote(){
         if(!text) {
             return alert('Your note must have content.')
         }
-        console.log('HERE WE GO AGAIN', bookId)
+
         if(bookId===undefined) {
             return alert('Please select a notebook!')
         }
@@ -93,6 +93,7 @@ export default function PostNote(){
             }}
             required
           />
+            <div className='editing-note-bar'>
             <select className='input-data'
             onChange={(e)=>setBookId(e.target.value)}
             value={bookId}
@@ -105,7 +106,7 @@ export default function PostNote(){
             </select>
 
             <button className='save-note-button' type="submit"><RiSave3Fill size='25px'/></button>
-
+            </div>
           </form>
         </div>
         );

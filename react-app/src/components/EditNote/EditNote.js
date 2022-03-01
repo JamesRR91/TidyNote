@@ -39,7 +39,7 @@ export default function EditNote({ id }) {
     if(!text) {
         return alert('Your note must have content.')
     }
-    console.log('HERE WE GO AGAIN', bookId)
+    
     if(bookId===undefined) {
         return alert('Please select a notebook!')
     }
