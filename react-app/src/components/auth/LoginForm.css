@@ -106,8 +106,21 @@
     text-decoration: none;
   }
   .logout-button{
-    
+    margin-left: 5px;
+    text-decoration: none;
+    outline: 0;
+    background: #0f5977;
+    border: 0;
+    color: white;
+    cursor: pointer;
+    border-radius: 7px;
+    padding: 5px;
+    font-weight: bold;
   }
+
+  .logout-button:hover {
+    background: #b91919;
+ }
 
   /* .logout-button{
     text-decoration: none;
