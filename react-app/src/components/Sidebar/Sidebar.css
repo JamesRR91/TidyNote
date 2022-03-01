@@ -73,23 +73,18 @@ height: 100vh;
     background-size: cover;
 }
 
-
-
-
 .sidebar{
     display: flex;
     flex-direction: row;
-
     margin: 10px;
-
-
 }
+
 .makerow {
     display: flex;
     flex-direction: row;
     align-content: center;
     justify-content: space-between;
-    align-items: baseline;
+    align-items: flex-end;
     flex-wrap: nowrap;
 }
 

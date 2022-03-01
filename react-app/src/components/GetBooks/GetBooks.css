@@ -2,11 +2,14 @@
     /* margin: 30px; */
     align-items: center;
     color: white;
-    border-radius: 10px;
+    /* border-radius: 10px; */
     /* background-image: url('/src/images/bookshelf.png'); */
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
+    margin-left: 20px;
+    margin-right: 20px;
+    margin-top: 10px;
 }
 .book{
     /* margin-top: 20px; */
@@ -15,6 +18,20 @@
     border-radius: 20px;
     /* text-align: center; */
     font-weight: bold;
+    margin-top: 5px;
+    width: 100%;
+}
+
+.bookName_and_icon {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+#book-logo {
+    margin-right: 5px;
 }
 
 .makerow{
@@ -39,7 +56,7 @@
 }
 
 .book-button:hover{
-    color: blue;
+    color: #2e41ad;
     /* background:blue; */
     /* background-color: blue; */
 }

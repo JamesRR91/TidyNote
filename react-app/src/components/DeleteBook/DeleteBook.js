@@ -3,6 +3,8 @@ import { useDispatch } from 'react-redux';
 import { useHistory } from 'react-router-dom';
 import { deleteBook } from '../../store/book';
 import './DeleteBook.css';
+import { MdDeleteForever } from 'react-icons/md'
+
 
 function DeleteBook({ id }) {
   const dispatch = useDispatch();
@@ -16,7 +18,7 @@ function DeleteBook({ id }) {
 
   return (
     <button className="delete-button" onClick={handleSubmit}>
-      Delete
+      <MdDeleteForever size='25px' />
     </button>
   );
 

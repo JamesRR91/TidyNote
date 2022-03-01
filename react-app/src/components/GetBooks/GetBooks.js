@@ -6,6 +6,7 @@ import './GetBooks.css';
 import DeleteBook from '../DeleteBook/DeleteBook';
 import EditBook from '../EditBook/EditBook';
 import { NavLink } from 'react-router-dom';
+import { FaBook } from 'react-icons/fa'
 
 
 export default function GetBooks(){
@@ -27,15 +28,14 @@ export default function GetBooks(){
     }
     return(
         <div className="get-books-parent">
-
-
-
-
             {books.map(({ id, book_name }) => (
               <div className='book' key={id}>
+                <div className='bookName_and_icon'>
+                    <FaBook id='book-logo' color='rgb(15, 89, 119)' />
                     <NavLink to={`/books/${id}`}>
                       <button className='book-button' onClick={()=>handleClick(id)}>{book_name}</button>
                     </NavLink>
+                </div>
                     <div className='makerow'>
                       {
                         openId===id?<EditBook id = {id}/>:null
