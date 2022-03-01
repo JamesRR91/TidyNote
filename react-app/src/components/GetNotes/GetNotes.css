@@ -12,9 +12,11 @@
     display: inline-block;
     width: 45%;
     margin: 25px;
-    background-color:  rgb(15, 89, 119);
+    /* background-color:  rgb(15, 89, 119); */
+    background-color: #6A994E;
+    box-shadow: 1px 1px 8px rgba(26, 26, 26, 0.36);
     padding: 20px;
-    border-radius: 20px;
+    border-radius: 10px;
     text-align: center;
     /* margin-right: 70px; */
     /* margin-left: 55px; */

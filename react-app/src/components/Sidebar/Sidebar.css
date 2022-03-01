@@ -44,13 +44,13 @@ height: 100vh;
     /* margin-left: 30px; */
     /* padding-top: 10vh; */
     box-shadow: 1px 1px 8px rgb(112 111 111 / 36%);
-    border-radius: 20px;
-    background-color: lightblue;
+    border-radius: 10px;
+    background-color: #A7C957;
     padding-top: 20px;
 }
 
 .sidebar2 {
-    padding: 20px;
+    padding: 10px;
     display: flex;
     flex-direction: column;
     /* justify-self: center;
@@ -63,9 +63,9 @@ height: 100vh;
     margin-left: 15px;
     /* padding-top: 10vh; */
 
-    border-radius: 20px;
-    background-color: lightblue;
-    background-image: url('/src/images/background.png');
+    border-radius: 10px;
+    background-color: #A7C957;
+    /* background-image: url('/src/images/background.png'); */
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;

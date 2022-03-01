@@ -31,15 +31,16 @@ export default function PostTag(){
       };
     return(
         <div className="PostTag">
-          <form className='input-data' onSubmit={handleSubmit}>
+          <form className='input-data-postNote' onSubmit={handleSubmit}>
             <input
+              id='NewBookInputBox'
               type="text"
               onChange={(e) => setName(e.target.value)}
               value={name}
               placeholder="New Tag"
               name="name"
             />
-            <button className='submit-button' type="submit">Save</button>
+            <button className='submit-button' type="submit">+</button>
           </form>
         </div>
         );

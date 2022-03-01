@@ -28,7 +28,7 @@ export default function PostBook(){
         <div className="PostBook">
           <form className='input-data-postNote' onSubmit={handleSubmit}>
             <input
-              id='NewNoteInputBox'
+              id='NewBookInputBox'
               type="text"
               onChange={(e) => setName(e.target.value)}
               value={name}
