@@ -5,6 +5,7 @@ import { createNote } from '../../store/note';
 import { getBooks } from '../../store/book';
 import { CKEditor } from '@ckeditor/ckeditor5-react';
 import ClassicEditor from '@ckeditor/ckeditor5-build-classic';
+import {RiSave3Fill} from 'react-icons/ri'
 
 import './PostNote.css';
 
@@ -78,6 +79,7 @@ export default function PostNote(){
               value={name}
               placeholder="New Note"
               name="name"
+              autocomplete="off"
               required
             />
           <CKEditor  className='input-data'
@@ -96,13 +98,13 @@ export default function PostNote(){
             value={bookId}
             required
             >
-            <option value=''>Please choose a notebook</option>
+            <option value=''>Please Select A Notebook</option>
 
             {books.map(({ id, book_name }) => (
                 <option value={id}>{book_name}</option>))}
             </select>
 
-            <button className='delete-button' type="submit">Save</button>
+            <button className='save-note-button' type="submit"><RiSave3Fill size='25px'/></button>
 
           </form>
         </div>

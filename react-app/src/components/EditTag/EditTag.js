@@ -6,8 +6,6 @@ import './EditTag.css'
 import { RiSave3Fill } from 'react-icons/ri';
 
 export default function EditTag({id}){
-
-
     const dispatch =useDispatch();
     const tag=useSelector((state)=> state.tag.entries[id])
 
@@ -37,6 +35,7 @@ export default function EditTag({id}){
                 value={name}
                 name="name"
                 autocomplete="off"
+                autoFocus={true}
                 />
                 <button type="submit" className="edit-button" ><RiSave3Fill size='25px'/></button>
             </form>

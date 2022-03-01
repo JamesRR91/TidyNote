@@ -40,7 +40,7 @@ export default function PostTag(){
               placeholder="New Tag"
               name="name"
               autocomplete="off"
-              autoFocus={true}
+              // autoFocus={true}
             />
             <button className='submit-button' type="submit">+</button>
           </form>
