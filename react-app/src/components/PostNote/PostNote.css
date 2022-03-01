@@ -86,3 +86,7 @@
 .save-note-button:hover {
    background: #000f63;
 }
+
+#newNoteOrEditNoteBox{
+   margin-bottom: 10px;
+}

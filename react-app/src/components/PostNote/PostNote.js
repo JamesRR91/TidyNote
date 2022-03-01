@@ -74,6 +74,7 @@ export default function PostNote(){
         <div className="PostNote">
           <form className='input-data' onSubmit={handleSubmit}>
             <input className='input-data'
+              id="newNoteOrEditNoteBox"
               type="text"
               onChange={(e) => setName(e.target.value)}
               value={name}

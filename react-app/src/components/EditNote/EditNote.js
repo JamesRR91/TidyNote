@@ -39,7 +39,7 @@ export default function EditNote({ id }) {
     if(!text) {
         return alert('Your note must have content.')
     }
-    
+
     if(bookId===undefined) {
         return alert('Please select a notebook!')
     }
@@ -72,6 +72,7 @@ export default function EditNote({ id }) {
     <div className='InputBox'>
       <form  onSubmit={handleSubmit}>
         <input className='input-data'
+          id='newNoteOrEditNoteBox'
           type='text'
           onChange={(e) => setName(e.target.value)}
           value={name}
