@@ -1,18 +1,33 @@
 .profile-list-item {
-    border-radius: 1px;
     font-weight: bold;
+    display: flex;
+    text-decoration: none;
+    transition-duration: 0.5s;
+    align-items: center;
+    justify-content: center;
 }
 
 .profile-dropdown {
-    font-weight: bold;
-    height: 20px;
+    position: absolute;
+    display: flex;
+    gap: 1vw;
+    box-shadow: none;
+    background-color:#5BA67B;
+    top: 75px;
+    left: 40%;
+    height: 50px!important;
+    overflow: hidden;
+    z-index: 10;
+    justify-content: center;
+    align-items: center;
+    transition: width 2s, height 2s, background-color 2s, transform 2s;
 }
 
-.profile-button ul {
+/* .profile-button ul {
     display: flex;
     flex-direction: column;
 }
 
 .welcome-message {
     margin-right: 5px;
-}
+} */

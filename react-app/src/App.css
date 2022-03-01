@@ -1,9 +1,9 @@
 /*
   1. Use a more-intuitive box-sizing model.
 */
-*, *::before, *::after {
+/* *, *::before, *::after {
     box-sizing: border-box;
-  }
+  } */
   /*
     2. Remove default margin
   */

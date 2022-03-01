@@ -11,7 +11,7 @@ const NavBar = ({loaded}) => {
   let sessionLinks;
   if (sessionUser) {
     sessionLinks = (
-      <li>
+      <li className='nav-element'>
             <div id="profileButton">
                 <ProfileButton user={sessionUser}/>
             </div>
@@ -36,8 +36,8 @@ const NavBar = ({loaded}) => {
   return (
     <div className="nav-container">
       <nav>
-        <ul>
-          <li>
+        <ul className='nav-list'>
+          <li className='nav-element'>
             <NavLink className="home-nav" to='/' exact={true} activeClassName='active'>
               TidyNote
             </NavLink>
