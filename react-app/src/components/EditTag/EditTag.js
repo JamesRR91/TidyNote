@@ -35,6 +35,7 @@ export default function EditTag({id}){
                 onChange={(e) => setName(e.target.value)}
                 value={name}
                 name="name"
+                autocomplete="off"
                 />
                 <button type="submit" className="edit-button" >Edit</button>
             </form>

@@ -39,6 +39,8 @@ export default function PostTag(){
               value={name}
               placeholder="New Tag"
               name="name"
+              autocomplete="off"
+              autoFocus={true}
             />
             <button className='submit-button' type="submit">+</button>
           </form>

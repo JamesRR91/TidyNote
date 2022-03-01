@@ -36,6 +36,8 @@ export default function EditBook({id}){
                 onChange={(e) => setName(e.target.value)}
                 value={name}
                 name="name"
+                autocomplete="off"
+                autoFocus={true}
                 />
                 <button type="submit" className="edit-button" ><RiSave3Fill size='25px'/></button>
             </form>

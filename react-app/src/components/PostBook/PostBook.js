@@ -34,6 +34,7 @@ export default function PostBook(){
               value={name}
               placeholder="New Book"
               name="name"
+              autocomplete="off"
             />
             <button className='submit-button' type="submit">+</button>
           </form>
