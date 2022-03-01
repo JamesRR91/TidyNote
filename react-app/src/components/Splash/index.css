@@ -18,10 +18,15 @@
 
 
     .nav-container{
-    background-color: lightblue;
-    /* height: 10%; */
-    border-radius: 20px;
-
+        background-color: lightblue;
+        /* height: 10%; */
+        border-radius: 10px;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: nowrap;
+        justify-content: space-around;
+        align-content: center;
+        align-items: center;
 }
 
 .SplashBox1 {

@@ -1,20 +1,37 @@
 .get-books-parent{
-    margin: 30px;
+    /* margin: 30px; */
     align-items: center;
     color: white;
-    border-radius: 10px;
-    background-image: url('/src/images/bookshelf.png');
+    /* border-radius: 10px; */
+    /* background-image: url('/src/images/bookshelf.png'); */
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
+    margin-left: 20px;
+    margin-right: 20px;
+    margin-top: 10px;
 }
 .book{
-    margin-top: 20px;
+    /* margin-top: 20px; */
     /* background-color: rgb(15, 89, 119); */
-    padding: 20px;
+    /* padding: 20px; */
     border-radius: 20px;
-    text-align: center;
+    /* text-align: center; */
     font-weight: bold;
+    margin-top: 5px;
+    width: 100%;
+}
+
+.bookName_and_icon {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+#book-logo {
+    margin-right: 5px;
 }
 
 .makerow{
@@ -27,8 +44,17 @@
 }
 
 .book-button{
-    padding: 5px;
+    /* padding: 5px;
     font-weight: bold;
-    font-size: 15px;
-    border-radius: 5px;
+    font-size: 14px; */
+    /* border-radius: 5px; */
+    background:none;
+    border:none;
+    margin:0;
+    padding:0;
+    cursor: pointer;
+}
+
+.book-button:hover{
+    color: #2e41ad;
 }

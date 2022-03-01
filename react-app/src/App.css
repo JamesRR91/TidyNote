@@ -15,7 +15,7 @@
   */
   html, body {
     height: 100%;
-    background-color: #ffffff;
+    background-color: #fff;
     font-family: 'Poppins', sans-serif;
   }
   /*
@@ -52,3 +52,8 @@
   #root, #__next {
     isolation: isolate;
   }
+
+  ul, li {
+    list-style-type: none;
+    list-style: none;
+ }

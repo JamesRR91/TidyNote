@@ -7,16 +7,11 @@ import { getBooks } from '../../store/book';
 import { useHistory } from 'react-router-dom';
 import { CKEditor } from '@ckeditor/ckeditor5-react';
 import ClassicEditor from '@ckeditor/ckeditor5-build-classic';
-import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import './EditNote.css';
-import Footer from '../Footer/Footer'
+import {RiSave3Fill} from 'react-icons/ri'
 
 import DeleteNote from '../DeleteNote/DeleteNote';
-
-// console.log('!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!')
-// console.log(ClassicEditor.builtinPlugins.map( plugin => plugin.pluginName ));
-
 
 
 export default function EditNote({ id }) {
@@ -73,21 +68,6 @@ export default function EditNote({ id }) {
     ], shouldNotGroupWhenFull: true
  };
 
-
-  // const notify = () => {
-  //   if (!name && !text && !bookId) {
-  //     toast.error("Your note needs some information!")
-  //   } else if (!name) {
-  //     toast.error("The note needs a name!");
-  //   } else if (!text) {
-  //     toast.error("The note needs some content!");
-  //   } else if (!bookId) {
-  //     toast.error("The note needs to be assigned to a book!");
-  //   } else {
-  //     toast.success("Saved!")
-  //   }
-  // }
-
   return (
     <div className='InputBox'>
       <form  onSubmit={handleSubmit}>
@@ -96,6 +76,7 @@ export default function EditNote({ id }) {
           onChange={(e) => setName(e.target.value)}
           value={name}
           text='name'
+          autocomplete="off"
           required
         />
         <CKEditor className='input-data'
@@ -117,14 +98,14 @@ export default function EditNote({ id }) {
           value={bookId}
           required
         >
-          <option value=''>Please choose a notebook</option>
+          <option value=''>Please Select A Notebook</option>
 
           {books.map(({ id, book_name }) => (
             <option value={id}>{book_name}</option>
           ))}
         </select>
 
-        <button onClick={handleSubmit} className='delete-button' type="submit">Edit</button>
+        <button onClick={handleSubmit} className='save-note-button' type="submit"><RiSave3Fill size='25px'/></button>
         <DeleteNote id={id} />
         </div>
       </form>

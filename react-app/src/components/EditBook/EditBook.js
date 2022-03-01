@@ -3,6 +3,7 @@ import { useSelector ,useDispatch } from 'react-redux';
 import {updateBook} from '../../store/book';
 import { useHistory } from 'react-router-dom';
 import './EditBook.css'
+import { RiSave3Fill } from 'react-icons/ri'
 
 export default function EditBook({id}){
 
@@ -35,8 +36,10 @@ export default function EditBook({id}){
                 onChange={(e) => setName(e.target.value)}
                 value={name}
                 name="name"
+                autocomplete="off"
+                autoFocus={true}
                 />
-                <button type="submit" className="edit-button" >Edit</button>
+                <button type="submit" className="edit-button" ><RiSave3Fill size='25px'/></button>
             </form>
         </div>
     )

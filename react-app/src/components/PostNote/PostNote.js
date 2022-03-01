@@ -5,8 +5,7 @@ import { createNote } from '../../store/note';
 import { getBooks } from '../../store/book';
 import { CKEditor } from '@ckeditor/ckeditor5-react';
 import ClassicEditor from '@ckeditor/ckeditor5-build-classic';
-import { ToastContainer, toast } from 'react-toastify';
-import 'react-toastify/dist/ReactToastify.css';
+import {RiSave3Fill} from 'react-icons/ri'
 
 import './PostNote.css';
 
@@ -64,28 +63,12 @@ export default function PostNote(){
           'heading', '|',
           'bold', 'italic', '|',
           'link', '|',
-          // 'outdent', 'indent', '|',
           'bulletedList', 'numberedList', '|',
-          // 'code', 'codeBlock', '|',
           'insertTable', '|',
           'blockQuote', '|',
           'undo', 'redo'
         ], shouldNotGroupWhenFull: true
      };
-
-    //  const notify = () => {
-    //   if (!name && !text && !bookId) {
-    //     toast.error("Your note needs some information!")
-    //   } else if (!name) {
-    //     toast.error("The note needs a name!");
-    //   } else if (!text) {
-    //     toast.error("The note needs some content!");
-    //   } else if (!bookId) {
-    //     toast.error("The note needs to be assigned to a book!");
-    //   } else {
-    //     toast.success("Saved!")
-    //   }
-    //  }
 
     return(
         <div className="PostNote">
@@ -96,6 +79,7 @@ export default function PostNote(){
               value={name}
               placeholder="New Note"
               name="name"
+              autocomplete="off"
               required
             />
           <CKEditor  className='input-data'
@@ -114,13 +98,13 @@ export default function PostNote(){
             value={bookId}
             required
             >
-            <option value=''>Please choose a notebook</option>
+            <option value=''>Please Select A Notebook</option>
 
             {books.map(({ id, book_name }) => (
                 <option value={id}>{book_name}</option>))}
             </select>
 
-            <button className='delete-button' type="submit">Save</button>
+            <button className='save-note-button' type="submit"><RiSave3Fill size='25px'/></button>
 
           </form>
         </div>

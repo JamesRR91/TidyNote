@@ -2,6 +2,7 @@ import React from 'react';
 import { useEffect, useState } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 import { createTaggedNote, deleteTaggedNote } from '../../store/taggednote';
+import './TaggingNotes.css'
 
 export default function TaggingNotes({note_id, tag_id, tag_name, tagged, taggedNote_id}){
     const dispatch= useDispatch();
@@ -27,9 +28,9 @@ export default function TaggingNotes({note_id, tag_id, tag_name, tagged, taggedN
     }
 
     return (
-        <div>
-        {tagged && <button onClick={removeTag}>untag</button>}
-        {!tagged && <button onClick={addTag}>tag</button>}
+        <div id='tagButton'>
+        {tagged && <button onClick={removeTag}>Untag</button>}
+        {!tagged && <button onClick={addTag}>Tag</button>}
         </div>
     )
 }

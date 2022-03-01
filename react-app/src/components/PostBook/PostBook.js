@@ -26,15 +26,17 @@ export default function PostBook(){
       };
     return(
         <div className="PostBook">
-          <form className='input-data' onSubmit={handleSubmit}>
+          <form className='input-data-postNote' onSubmit={handleSubmit}>
             <input
+              id='NewBookInputBox'
               type="text"
               onChange={(e) => setName(e.target.value)}
               value={name}
               placeholder="New Book"
               name="name"
+              autocomplete="off"
             />
-            <button className='submit-button' type="submit">Save</button>
+            <button className='submit-button' type="submit">+</button>
           </form>
         </div>
         );

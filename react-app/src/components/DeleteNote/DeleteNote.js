@@ -3,6 +3,7 @@ import { useDispatch } from 'react-redux';
 import { useHistory } from 'react-router-dom';
 import { deleteNote } from "../../store/note";
 import './DeleteNote.css';
+import {MdDeleteForever} from 'react-icons/md'
 
 function DeleteNote({ id }) {
     const dispatch = useDispatch();
@@ -16,7 +17,7 @@ function DeleteNote({ id }) {
 
     return (
       <button className="delete-button" onClick={handleSubmit}>
-        Delete
+      <MdDeleteForever size='25px' />
       </button>
     );
 
