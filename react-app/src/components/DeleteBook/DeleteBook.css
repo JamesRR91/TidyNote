@@ -6,6 +6,7 @@
     border: 0;
     color: white;
     cursor: pointer;
+    border-radius: 7px;
 }
 
 .delete-button:hover {

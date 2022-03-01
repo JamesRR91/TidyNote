@@ -16,6 +16,7 @@
     padding: 5px;
     box-sizing: border-box;
     font-size: 14px;
+    border-radius: 5px;
 }
 
 .edit-button{
@@ -26,6 +27,7 @@
     border: 0;
     color: white;
     cursor: pointer;
+    border-radius: 7px;
 }
 
 .edit-button:hover {
