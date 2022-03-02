@@ -16,26 +16,6 @@ export default function GetBooks(){
     const booksObj = useSelector((state) => state.book.entries);
     const books = Object.values(booksObj);
 
-    const bookButton=document.querySelector('.book-button');
-    const noteBackground=document.querySelector('.note');
-
-    // bookButton.addEventListener('click',() => {
-    //   let color = '#';
-    //   color+=Math.random().toString(16).slice(2,8);
-    //   noteBackground.style.backgroundColor=color;
-
-    // })
-
-    // const colorChange=() => {
-    //   let color = '#';
-    //   color+=Math.random().toString(16).slice(2,8);
-    //   noteBackground.style.backgroundColor=color;
-    // }
-
-    const changeNotes=()=> {
-
-    }
-
     useEffect(() => {
         dispatch(getBooks());
     }, [dispatch]);
@@ -48,8 +28,6 @@ export default function GetBooks(){
       } else {
         setOpenId(id)
       }
-      // console.log('CAN I SEE THIS!?', bookButton);
-      // console.log('HOW ABOUT THIS', noteBackground.style);
     }
     return(
         <div className="get-books-parent">
