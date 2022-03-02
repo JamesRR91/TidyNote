@@ -9,6 +9,8 @@ import './GetNotes.css';
 import SeeTaggedNotes from '../SeeTaggedNotes/SeeTaggedNotes';
 import { useParams } from 'react-router-dom';
 import { getAllTaggedNotes } from '../../store/taggednote';
+import { motion } from 'framer-motion';
+import { fadeOut, transition } from '../animations';
 
 export default function GetNotes(){
     const dispatch= useDispatch();
@@ -36,6 +38,7 @@ export default function GetNotes(){
         dispatch(getAllNotes());
     }, [dispatch]);
     return(
+      <motion.div initial="out" animate="in" exit="out" variants={fadeOut} transition={transition}>
         <div className="get-notes-parent">
             {filteredNotes?.length ? filteredNotes.map(({ id, note_name, note_text}) => (
               <div className='note' key={id}>
@@ -50,5 +53,6 @@ export default function GetNotes(){
               </div>
             )): <div className='no-note-parent'><h3 className='no-note'>This book / tag has no associated notes.<br></br>Please make one above.</h3></div>}
         </div>
+        </motion.div>
     )
 }
