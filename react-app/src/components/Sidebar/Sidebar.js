@@ -2,7 +2,7 @@ import React from "react";
 import { getBooks } from "../../store/book";
 import GetBooks from "../GetBooks/GetBooks";
 import GetNotes from "../GetNotes/GetNotes";
-import PostNote from "../PostNote/PostNote";
+import LeaveNoteModal from "../NoteModal/index";
 import PostBook from "../PostBook/PostBook";
 import PostTag from "../PostTag/PostTag";
 import GetTags from "../GetTags/GetTags";
@@ -22,7 +22,7 @@ export default function Sidebar(){
             </div>
             <div className="sidebar2">
             <h3 className="book-title">My Notes</h3>
-            <PostNote />
+            <LeaveNoteModal />
             <Switch>
                 <Route path='/' exact>
                     <GetNotes />
