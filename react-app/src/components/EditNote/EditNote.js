@@ -56,13 +56,9 @@ export default function EditNote({ id }) {
 
   const editorConfiguration = {
     toolbar: [
-      'heading', '|',
       'bold', 'italic', '|',
       'link', '|',
-      // 'outdent', 'indent', '|',
       'bulletedList', 'numberedList', '|',
-      // 'code', 'codeBlock', '|',
-      'insertTable', '|',
       'blockQuote', '|',
       'undo', 'redo'
     ], shouldNotGroupWhenFull: true

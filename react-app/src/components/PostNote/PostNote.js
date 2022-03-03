@@ -60,13 +60,11 @@ export default function PostNote(){
 
       const editorConfiguration = {
         toolbar: [
-          'heading', '|',
           'bold', 'italic', '|',
           'link', '|',
           'bulletedList', 'numberedList', '|',
-          'insertTable', '|',
           'blockQuote', '|',
-          'undo', 'redo'
+          'undo', 'redo',
         ], shouldNotGroupWhenFull: true
      };
 
