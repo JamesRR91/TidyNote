@@ -28,9 +28,9 @@ export default function TaggingNotes({note_id, tag_id, tag_name, tagged, taggedN
     }
 
     return (
-        <div id='tagButton'>
-        {tagged && <button onClick={removeTag}>Untag</button>}
-        {!tagged && <button onClick={addTag}>Tag</button>}
+        <div id='tagButtondiv'>
+        {tagged && <button className='tagBttn' onClick={removeTag}>Untag</button>}
+        {!tagged && <button className='tagBttn' onClick={addTag}>Tag</button>}
         </div>
     )
 }

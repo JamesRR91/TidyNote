@@ -95,7 +95,6 @@
 }
 
 .allThree {
-  /* background-color: red; */
   display: flex;
   flex-direction: row;
   flex-wrap: nowrap;

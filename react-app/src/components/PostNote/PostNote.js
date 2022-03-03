@@ -95,7 +95,7 @@ export default function PostNote(){
             required
           />
             <div className='editing-note-bar'>
-            <select className='input-data'
+            <select className='selectBookDropDown'
             onChange={(e)=>setBookId(e.target.value)}
             value={bookId}
             required
