@@ -21,7 +21,6 @@ export default function PostNote(){
     // const firstBookId=firstBook.id;
     const [name, setName] = useState("");
     const [text, setText] = useState("");
-    // console.log('TESTING TESTING', books[0].book_name)
     const [bookId, setBookId]=useState(firstBook);
     // const booksObj = useSelector((state) => state.book.entries);
     // const books = Object.values(booksObj);
