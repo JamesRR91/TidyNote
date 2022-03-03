@@ -10,3 +10,6 @@ export const fadeOut={
 export const transition= {
     duration: .5
 }
+
+
+//This is a note
