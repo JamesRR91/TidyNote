@@ -33,7 +33,6 @@ function App() {
   return (
     <>
     <NavBar loaded={loaded}/>
-    <AnimatePresence>
       <Switch location={location} key={location.pathname}>
         <Route path='/login' exact={true}>
           <LoginForm />
@@ -48,7 +47,6 @@ function App() {
           <h1>My Home Page</h1>
         </ProtectedRoute>
       </Switch>
-      </AnimatePresence>
       {/* <Footer /> */}
       </>
   );

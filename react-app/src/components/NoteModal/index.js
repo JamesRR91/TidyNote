@@ -8,12 +8,14 @@ function NoteModal() {
 
     return (
         <>
-            <button onClick={() => setShowModal(true)} className='leave-review'>  Add a Note</button>
+        <div className='createANoteButtonForModalMain'>
+            <button onClick={() => setShowModal(true)} className='createANoteButtonForModal'>Create A Note</button>
             {showModal && (
                 <Modal onClose={() => setShowModal(false)}>
                     <PostNote hideForm={() => setShowModal(false)} />
                 </Modal>
             )}
+        </div>
         </>
     );
 }
