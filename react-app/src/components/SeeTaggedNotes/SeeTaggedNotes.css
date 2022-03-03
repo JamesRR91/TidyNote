@@ -3,11 +3,11 @@
     padding: 5px;
 }
 
-.taglist{
-
+.taglist {
     display: flex;
     flex-direction: row;
-    justify-content: center;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
 }
 
 .fa-tag:before {
