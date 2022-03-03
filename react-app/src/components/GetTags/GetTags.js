@@ -6,7 +6,7 @@ import EditTag from '../EditTag/EditTag';
 import DeleteTag from '../DeleteTag/DeleteTag';
 import './GetTags.css';
 import { NavLink } from 'react-router-dom';
-import { FaTag } from 'react-icons/fa'
+import { FaTag, FaEdit } from 'react-icons/fa'
 
 export default function GetTags(){
     const dispatch= useDispatch();
@@ -31,8 +31,11 @@ export default function GetTags(){
                   <div className='bookName_and_icon'>
                     <FaTag id='book-logo' color='rgb(15, 89, 119)' />
                     <NavLink to={`/tags/${id}`}>
-                      <button className='tag-button' onClick={() => handleClick(id)}>{tag_name}</button>
+                      <button className='tag-button'>{tag_name}</button>
                     </NavLink>
+                    <button className='edit-book-button' onClick={()=>handleClick(id)}>
+                      <FaEdit id='book-logo' />
+                      </button>
                   </div>
                     <div className='makerow'>
                     {
