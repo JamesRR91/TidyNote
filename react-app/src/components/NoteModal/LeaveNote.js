@@ -87,13 +87,13 @@ export default function PostNote({hideForm}){
 
     return(
         <div className="PostNote">
-          <form className='input-data' onSubmit={handleSubmit}>
+          <form className='input-data-k' onSubmit={handleSubmit}>
             <input className='input-data'
               id="newNoteOrEditNoteBox"
               type="text"
               onChange={(e) => setName(e.target.value)}
               value={name}
-              placeholder="New Note"
+              placeholder="Name"
               name="name"
               autocomplete="off"
               required
@@ -110,7 +110,7 @@ export default function PostNote({hideForm}){
             required
           />
             <div className='editing-note-bar'>
-            <select className='input-data'
+            <select className='input-data-s'
             onChange={(e)=>setBookId(e.target.value)}
             value={bookId}
             required
