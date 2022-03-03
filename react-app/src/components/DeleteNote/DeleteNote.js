@@ -12,7 +12,7 @@ function DeleteNote({ id }) {
     const handleSubmit = (e) => {
       e.preventDefault();
       dispatch(deleteNote(id));
-      history.push('/');
+      // history.push('/');
     };
 
     return (
