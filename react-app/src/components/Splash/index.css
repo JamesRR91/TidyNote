@@ -1,4 +1,4 @@
-.parent {
+/* .parent {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   grid-template-rows: repeat(4, 1fr);
@@ -7,19 +7,6 @@
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
-}
-
-.nav-container {
-  grid-area: 1 / 1 / 2 / 5;
-}
-.div2 {
-  grid-area: 4 / 1 / 5 / 5;
-}
-.SplashBox1 {
-  grid-area: 2 / 1 / 4 / 3;
-}
-.SplashBox2 {
-  grid-area: 2 / 3 / 4 / 5;
 }
 
 .nav-container{
@@ -61,4 +48,9 @@
   margin-top: 10px;
   font-size: 25px;
   text-align: center;
+} */
+
+
+.BoxOne {
+    display: flex;
 }

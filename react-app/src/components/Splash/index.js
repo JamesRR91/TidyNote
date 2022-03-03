@@ -12,19 +12,17 @@ export default function Splash() {
     return (
       <div>
         <div className='parent'>
-          <div className='SplashBox1'>
+          <div className='BoxOne'>
             <h3 className='welcome'>Welcome to TidyNote</h3>
-            <h4 className='quote'>Tame Your Work. Organize Your Life.</h4>
-            <h4 className='quote2'>
-              Remember everything and tackle any project with your notes, tasks,
-              and schedule all in one place.
+            <h4 className='topOne'>Tame Your Work. Organize Your Life.</h4>
+            <h4 className='topTwo'>
+              Remember everything and tackle any project with your books, notes, and tags all in one place.
             </h4>
           </div>
-          <div className='SplashBox2'>
+          <div className='BoxTwo'>
             <img
-              src='https://cdn.discordapp.com/attachments/536996013911572484/930286778064187472/favcon.png'
-              alt='green'
-              className='image'
+              src='https://catpedia.net/wp-content/uploads/2018/01/Chartreux-cat.jpg'
+              className='laptopImage'
             ></img>
           </div>
         </div>
