@@ -8,7 +8,7 @@ function LeaveNoteModal() {
 
     return (
         <>
-            <button onClick={() => setShowModal(true)} className='leave-review'>Add a Note</button>
+            <button onClick={() => setShowModal(true)} className='leave-review'>  Add a Note</button>
             {showModal && (
                 <Modal onClose={() => setShowModal(false)}>
                     <PostNote hideForm={() => setShowModal(false)} />
