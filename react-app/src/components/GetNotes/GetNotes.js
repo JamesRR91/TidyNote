@@ -47,7 +47,6 @@ export default function GetNotes(){
                 </div>
                 <div>
                   <EditNote id={id} />
-                  {/* <DeleteNote id={id} /> */}
                 </div>
                   <SeeTaggedNotes id={id}/>
               </div>
