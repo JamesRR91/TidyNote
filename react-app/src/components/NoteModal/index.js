@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { Modal } from '../../context/Modal';
-import PostNote from './NoteModal';
+import PostNoteModal from './NoteModal';
 import './NoteModal.css'
 
 function NoteModal() {
@@ -12,7 +12,7 @@ function NoteModal() {
             <button onClick={() => setShowModal(true)} className='createANoteButtonForModal'>Create A Note</button>
             {showModal && (
                 <Modal onClose={() => setShowModal(false)}>
-                    <PostNote hideForm={() => setShowModal(false)} />
+                    <PostNoteModal hideForm={() => setShowModal(false)} />
                 </Modal>
             )}
         </div>

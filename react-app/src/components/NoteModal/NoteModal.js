@@ -11,7 +11,7 @@ import { useParams } from "react-router";
 import './NoteModal.css';
 
 
-export default function PostNote({hideForm}){
+export default function PostNoteModal({hideForm}){
     const booksObj = useSelector((state) => state.book.entries);
     const books = Object.values(booksObj);
     const firstBook=books[0]?.id;
@@ -86,44 +86,44 @@ export default function PostNote({hideForm}){
      };
 
     return(
-        <div className="PostNote">
-          <form className='input-data-k' onSubmit={handleSubmit}>
-            <input className='input-data'
-              id="newNoteOrEditNoteBox"
-              type="text"
-              onChange={(e) => setName(e.target.value)}
-              value={name}
-              placeholder="Name"
-              name="name"
-              autocomplete="off"
+          <div className="PostNote">
+            <form className='input-data-modal' onSubmit={handleSubmit}>
+              <input className='input-data-modal'
+                id="newNoteOrEditNoteBox"
+                type="text"
+                onChange={(e) => setName(e.target.value)}
+                value={name}
+                placeholder="New Note"
+                name="name"
+                autocomplete="off"
+                required
+              />
+            <CKEditor  className='input-data-modal'
+                editor={ClassicEditor}
+                config={ editorConfiguration }
+                data={text}
+                onChange={(event, editor) => {
+                const data = editor.getData();
+                setText(data)
+
+              }}
               required
             />
-          <CKEditor  className='input-data'
-              editor={ClassicEditor}
-              config={ editorConfiguration }
-              data={text}
-              onChange={(event, editor) => {
-              const data = editor.getData();
-              setText(data)
+              <div className='editing-note-bar'>
+              <select className='selectBookDropDown'
+              onChange={(e)=>setBookId(e.target.value)}
+              value={bookId}
+              required
+              >
+              <option value=''>Please Select A Notebook</option>
 
-            }}
-            required
-          />
-            <div className='editing-note-bar'>
-            <select className='input-data-s'
-            onChange={(e)=>setBookId(e.target.value)}
-            value={bookId}
-            required
-            >
-            <option value=''>Please Select A Notebook</option>
+              {books.map(({ id, book_name }) => (
+                  <option value={id}>{book_name}</option>))}
+              </select>
 
-            {books.map(({ id, book_name }) => (
-                <option value={id}>{book_name}</option>))}
-            </select>
-
-            <button className='save-note-button' type="submit"><RiSave3Fill size='25px'/></button>
-            </div>
-          </form>
-        </div>
+              <button className='save-note-button' type="submit"><RiSave3Fill size='25px'/></button>
+              </div>
+            </form>
+          </div>
         );
 };

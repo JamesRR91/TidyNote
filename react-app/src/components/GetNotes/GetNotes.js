@@ -4,6 +4,7 @@ import { useSelector, useDispatch } from 'react-redux';
 import { getAllNotes } from '../../store/note';
 import PostNote from '../PostNote/PostNote';
 import EditNote from '../EditNote/EditNote';
+import NoteModal from "../NoteModal/index";
 import DeleteNote from '../DeleteNote/DeleteNote';
 // import './GetNotes.css';
 import './GetNotes2.css'
@@ -63,6 +64,7 @@ export default function GetNotes() {
       variants={fadeOut}
       transition={transition}
     >
+    <NoteModal />
     <div className='bookName_and_icon_big'>
       <h3 className='book-title'>
         {books.map(({ id, book_name }) => (

@@ -73,7 +73,7 @@ const tagReducer = (state = initialState, action) => {
   switch (action.type) {
     case LOAD_TAGS: {
       const newState = { ...state, entries: {} };
-      for (let i = 0; i < action.tags.length; i++) {
+      for (let i = 0; i < action.tags?.length; i++) {
         let tag = action.tags[i];
         newState.entries[tag.id] = tag;
       }
