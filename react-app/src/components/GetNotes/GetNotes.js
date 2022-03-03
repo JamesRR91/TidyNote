@@ -37,8 +37,27 @@ export default function GetNotes(){
     useEffect(() => {
         dispatch(getAllNotes());
     }, [dispatch]);
+
+    const booksObj = useSelector((state) => state.book.entries);
+    const books = Object.values(booksObj);
+
     return(
       <motion.div initial="out" animate="in" exit="out" variants={fadeOut} transition={transition}>
+
+            <h3 className="book-title">
+                    {books.map(({ id, book_name }) => (
+                        <div className='book' key={id}>
+                          {id == bookId &&
+                            <h2>
+                              {book_name}
+                            </h2>
+                          }
+                        </div>
+                    ))}
+                </h3>
+
+
+
         <div className="get-notes-parent">
             {filteredNotes?.length ? filteredNotes.map(({ id, note_name, note_text}) => (
               <div className='note' key={id}>
