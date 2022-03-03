@@ -93,4 +93,17 @@
 
 #newNoteOrEditNoteBox{
    margin-bottom: 10px;
+   border-radius: 5px;
+   outline: 0;
+   background: #ffffff;
+   border: 0;
+   box-sizing: border-box;
+}
+
+.selectBookDropDown {
+   outline: 0;
+   border-radius: 5px;
+   background: #ffffff;
+   border: 0;
+   text-align: center;
 }

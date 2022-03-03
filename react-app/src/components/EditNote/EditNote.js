@@ -94,7 +94,7 @@ export default function EditNote({ id }) {
         />
         {/* <div className='makerow'> */}
         <div className='editing-note-bar'>
-        <select className='input-data'
+        <select className='selectBookDropDown'
           onChange={(e) => setBookId(e.target.value)}
           value={bookId}
           required
