@@ -4,17 +4,20 @@ import { Provider } from 'react-redux';
 import './index.css';
 import App from './App';
 import configureStore from './store';
+import {BrowserRouter} from 'react-router-dom';
 import { ModalProvider } from './context/Modal';
 
 const store = configureStore();
 
 ReactDOM.render(
   <React.StrictMode>
-    <Provider store={store}>
-      <ModalProvider>
-        <App />
-      </ModalProvider>
-    </Provider>
+  <BrowserRouter>
+  <Provider store={store}>
+  <ModalProvider>
+  <App />
+  </ModalProvider>
+  </Provider>
+  </BrowserRouter>
   </React.StrictMode>,
   document.getElementById('root')
 );

@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { BrowserRouter, Route, Switch } from 'react-router-dom';
+import { BrowserRouter, Route, Switch, useLocation } from 'react-router-dom';
 import { useDispatch } from 'react-redux';
 import LoginForm from './components/auth/LoginForm';
 import SignUpForm from './components/auth/SignUpForm';
@@ -11,9 +11,11 @@ import { authenticate } from './store/session';
 import './App.css';
 import Splash from './components/Splash'
 import Footer from './components/Footer/Footer'
+import {AnimatePresence} from 'framer-motion';
 
 
 function App() {
+  const location=useLocation();
   const [loaded, setLoaded] = useState(false);
   const dispatch = useDispatch();
 
@@ -29,9 +31,10 @@ function App() {
   }
 
   return (
-    <BrowserRouter>
-      <NavBar loaded={loaded}/>
-      <Switch>
+    <>
+    <NavBar loaded={loaded}/>
+    <AnimatePresence>
+      <Switch location={location} key={location.pathname}>
         <Route path='/login' exact={true}>
           <LoginForm />
         </Route>
@@ -45,8 +48,9 @@ function App() {
           <h1>My Home Page</h1>
         </ProtectedRoute>
       </Switch>
+      </AnimatePresence>
       {/* <Footer /> */}
-    </BrowserRouter>
+      </>
   );
 }
 
