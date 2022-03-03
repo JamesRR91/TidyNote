@@ -11,11 +11,13 @@ const store = configureStore();
 
 ReactDOM.render(
   <React.StrictMode>
-    <Provider store={store}>
-      <ModalProvider>
-        <App />
-      </ModalProvider>
-    </Provider>
+  <BrowserRouter>
+  <Provider store={store}>
+  <ModalProvider>
+  <App />
+  </ModalProvider>
+  </Provider>
+  </BrowserRouter>
   </React.StrictMode>,
   document.getElementById('root')
 );
