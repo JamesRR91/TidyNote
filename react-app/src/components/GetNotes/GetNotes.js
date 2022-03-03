@@ -5,7 +5,8 @@ import { getAllNotes } from '../../store/note';
 import PostNote from '../PostNote/PostNote';
 import EditNote from '../EditNote/EditNote';
 import DeleteNote from '../DeleteNote/DeleteNote';
-import './GetNotes.css';
+// import './GetNotes.css';
+import './GetNotes2.css'
 import SeeTaggedNotes from '../SeeTaggedNotes/SeeTaggedNotes';
 import { useParams } from 'react-router-dom';
 import { getAllTaggedNotes } from '../../store/taggednote';
@@ -39,6 +40,15 @@ export default function GetNotes() {
     dispatch(getAllNotes());
   }, [dispatch]);
 
+  const [openNoteId, setOpenNoteId]=useState(null);
+  const handleClick= (id) => {
+    if (openNoteId===id) {
+      setOpenNoteId(null)
+    } else {
+      setOpenNoteId(id)
+    }
+  }
+
   const booksObj = useSelector((state) => state.book.entries);
   const books = Object.values(booksObj);
 
@@ -59,13 +69,22 @@ export default function GetNotes() {
       </h3>
       <div className='get-notes-parent'>
         {filteredNotes?.length ? (
-          filteredNotes.map(({ id, note_name, note_text }) => (
+          filteredNotes.map(({ id, note_name }) => (
             <div className='note' key={id}>
-              <div className='note-name'>{note_name}</div>
+              <button className='edit-note-button' onClick={()=>handleClick(id)}>{note_name}</button>
               <div>
+                      {
+                        openNoteId===id?<EditNote id = {id}/>:null
+                      }
+                      {
+                        openNoteId===id?<SeeTaggedNotes id = {id}/>:null
+                      }
+                    </div>
+              {/* <div className='note-name'>{note_name}</div> */}
+              {/* <div>
                 <EditNote id={id} />
               </div>
-              <SeeTaggedNotes id={id} />
+              <SeeTaggedNotes id={id} /> */}
             </div>
           ))
         ) : (

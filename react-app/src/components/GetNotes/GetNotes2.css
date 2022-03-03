@@ -1,0 +1,82 @@
+/* .get-notes-parent{
+    color: white;
+    align-items: center;
+    align-content: center;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.note{
+    display: inline-block;
+    width: 45%;
+    margin-left: 25px;
+    margin-right: 25px;
+    background-color: rgb(23 131 175);
+    box-shadow: 1px 1px 8px rgba(26, 26, 26, 0.36);
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+}
+
+.note-name{font-size: 25px;
+    font-weight: bold;
+}
+
+.makerow{
+    display: flex;
+    flex-direction: row;
+}
+
+.ck-editor__editable_inline {
+    min-height: 250px !important;
+    font-size: 14px;
+    font-weight: normal !important;
+ } */
+
+ .book-title {
+    color: rgb(0, 0, 0);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex-wrap: nowrap;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+ .no-note {
+    margin: 0;
+    padding:0;
+    align-self: center;
+    text-align: center;
+    color: black;
+}
+
+.note{
+    margin-left: 25px;
+    margin-right: 25px;
+    margin-top: 10px;
+    background-color: rgb(23 131 175);
+    box-shadow: 1px 1px 8px rgba(26, 26, 26, 0.36);
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+}
+
+.edit-note-button{
+    background:none;
+    width: 100%;
+    border:none;
+    margin:0;
+    padding:0;
+    cursor: pointer;
+    color:rgb(255, 255, 255);
+    font-weight: bold;
+    font-size: 24px;
+}
+
+.edit-note-button:hover{
+    color: #2e41ad;
+    color: rgb(0, 191, 255);
+}
