@@ -28,7 +28,7 @@
 
 .ck-editor__editable_inline {
    color:black;
-   height: 15vh;
+   height: 250px;
  }
 .leave-review{
     background-color: white;
@@ -130,6 +130,6 @@
 }
 
 .ck-rounded-corners .ck.ck-editor__main>.ck-editor__editable, .ck.ck-editor__main>.ck-editor__editable.ck-rounded-corners{
-   height: 250px;
+   height: 20px;
    font-size: 20px;
 }
