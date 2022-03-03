@@ -6,7 +6,7 @@ import './GetBooks.css';
 import DeleteBook from '../DeleteBook/DeleteBook';
 import EditBook from '../EditBook/EditBook';
 import { NavLink } from 'react-router-dom';
-import { FaBook } from 'react-icons/fa';
+import { FaBook, FaEdit } from 'react-icons/fa';
 import {motion} from 'framer-motion';
 import {fadeOut, transition} from '../animations';
 
@@ -36,8 +36,11 @@ export default function GetBooks(){
                 <div className='bookName_and_icon'>
                     <FaBook id='book-logo' color='rgb(15, 89, 119)' />
                     <NavLink to={`/books/${id}`}>
-                      <button className='book-button' onClick={()=>handleClick(id)}>{book_name}</button>
+                      <button className='book-button' >{book_name}</button>
                     </NavLink>
+                      <button className='edit-book-button' onClick={()=>handleClick(id)}>
+                      <FaEdit id='book-logo' />
+                      </button>
                 </div>
                     <div className='makerow'>
                       {

@@ -27,7 +27,8 @@
     flex-direction: row;
     flex-wrap: nowrap;
     align-items: center;
-    justify-content: flex-start;
+    justify-content: space-between;
+    align-content: center;
 }
 
 #book-logo {
@@ -44,10 +45,6 @@
 }
 
 .book-button{
-    /* padding: 5px;
-    font-weight: bold;
-    font-size: 14px; */
-    /* border-radius: 5px; */
     background:none;
     border:none;
     margin:0;
@@ -56,5 +53,18 @@
 }
 
 .book-button:hover{
+    color: #2e41ad;
+}
+
+.edit-book-button{
+    background:none;
+    border:none;
+    margin:0;
+    padding:0;
+    cursor: pointer;
+    color:rgb(15, 89, 119)
+}
+
+.edit-book-button:hover{
     color: #2e41ad;
 }
