@@ -18,6 +18,10 @@ export default function PostBook(){
           return alert('Your book must have a name.')
         }
 
+        if(name.length > 25) {
+          return alert ('Must have less than 25 characters.')
+      }
+
         const newBook = {
           book_name: name
         };

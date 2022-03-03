@@ -20,7 +20,7 @@ export default function PostTag(){
         }
 
         if(name.length > 15) {
-            return alert ('Too many characters.')
+            return alert ('Must have less than 15 characters.')
         }
 
         const newTag = {
