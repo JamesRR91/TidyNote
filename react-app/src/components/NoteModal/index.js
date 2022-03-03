@@ -1,9 +1,9 @@
 import React, { useState } from 'react';
 import { Modal } from '../../context/Modal';
-import PostNote from './LeaveNote';
-import './LeaveNote.css'
+import PostNote from './NoteModal';
+import './NoteModal.css'
 
-function LeaveNoteModal() {
+function NoteModal() {
     const [showModal, setShowModal] = useState(false);
 
     return (
@@ -18,4 +18,4 @@ function LeaveNoteModal() {
     );
 }
 
-export default LeaveNoteModal;
+export default NoteModal;

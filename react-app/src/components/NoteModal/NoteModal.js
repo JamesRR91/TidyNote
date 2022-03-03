@@ -8,7 +8,7 @@ import ClassicEditor from '@ckeditor/ckeditor5-build-classic';
 import {RiSave3Fill} from 'react-icons/ri';
 import { useParams } from "react-router";
 
-import './LeaveNote.css';
+import './NoteModal.css';
 
 
 export default function PostNote({hideForm}){
