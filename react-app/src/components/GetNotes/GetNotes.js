@@ -12,6 +12,7 @@ import { useParams } from 'react-router-dom';
 import { getAllTaggedNotes } from '../../store/taggednote';
 import { motion } from 'framer-motion';
 import { fadeOut, transition } from '../animations';
+import { FaBook, FaTag } from 'react-icons/fa';
 import { BrowserRouter, Route, Switch, useLocation } from 'react-router-dom';
 
 export default function GetNotes() {
@@ -51,6 +52,8 @@ export default function GetNotes() {
 
   const booksObj = useSelector((state) => state.book.entries);
   const books = Object.values(booksObj);
+  const tagsObj = useSelector((state) => state.tag.entries);
+  const tags = Object.values(tagsObj);
 
   return (
     <motion.div
@@ -60,13 +63,24 @@ export default function GetNotes() {
       variants={fadeOut}
       transition={transition}
     >
+    <div className='bookName_and_icon_big'>
       <h3 className='book-title'>
         {books.map(({ id, book_name }) => (
           <div className='bookTitle' key={id}>
-            {id == bookId && <h2>{book_name}</h2>}
+            {id == bookId && <h2 className='bookAndLogo'><FaBook id='book-logo' color='rgb(15, 89, 119)' />{book_name}</h2>}
           </div>
         ))}
       </h3>
+    </div>
+    <div className='bookName_and_icon_big'>
+      <h3 className='book-title'>
+        {tags.map(({ id, tag_name }) => (
+          <div className='bookTitle' key={id}>
+            {id == tagId && <h2 className='bookAndLogo'><FaTag id='book-logo' color='rgb(15, 89, 119)' />{tag_name}</h2>}
+          </div>
+        ))}
+      </h3>
+    </div>
       <div className='get-notes-parent'>
         {filteredNotes?.length ? (
           filteredNotes.map(({ id, note_name }) => (

@@ -35,14 +35,15 @@
     font-weight: normal !important;
  } */
 
- .book-title {
+ .bookAndLogo {
     color: rgb(0, 0, 0);
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     align-items: center;
     flex-wrap: nowrap;
     margin-top: 10px;
     margin-bottom: 10px;
+    justify-content: center;
 }
 
  .no-note {
