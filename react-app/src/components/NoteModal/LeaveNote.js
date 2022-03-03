@@ -126,4 +126,4 @@ export default function PostNote({hideForm}){
           </form>
         </div>
         );
-};
+}
