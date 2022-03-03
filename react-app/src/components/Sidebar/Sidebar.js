@@ -2,6 +2,7 @@ import React from "react";
 import { getBooks } from "../../store/book";
 import GetBooks from "../GetBooks/GetBooks";
 import GetNotes from "../GetNotes/GetNotes";
+import GetNotesDashBoard from "../GetNotesDashboard/GetNotesDashBoard";
 import LeaveNoteModal from "../NoteModal/index";
 import PostBook from "../PostBook/PostBook";
 import PostTag from "../PostTag/PostTag";
@@ -10,8 +11,6 @@ import './Sidebar.css';
 import { Route, Switch } from "react-router-dom";
 
 export default function Sidebar(){
-
-
     return(
         <div className="sidebar">
             <div className="sidebar1">
@@ -27,7 +26,7 @@ export default function Sidebar(){
             <LeaveNoteModal />
             <Switch>
                 <Route path='/' exact>
-                    <GetNotes />
+                    <GetNotesDashBoard />
                 </Route>
                 <Route path='/books/:bookId'>
                     <GetNotes />

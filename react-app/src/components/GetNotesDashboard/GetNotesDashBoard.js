@@ -5,7 +5,7 @@ import { getAllNotes } from '../../store/note';
 import PostNote from '../PostNote/PostNote';
 import EditNote from '../EditNote/EditNote';
 import DeleteNote from '../DeleteNote/DeleteNote';
-import './GetNotes.css';
+// import './GetNotesDashboard.css';
 import SeeTaggedNotes from '../SeeTaggedNotes/SeeTaggedNotes';
 import { useParams } from 'react-router-dom';
 import { getAllTaggedNotes } from '../../store/taggednote';
@@ -13,7 +13,7 @@ import { motion } from 'framer-motion';
 import { fadeOut, transition } from '../animations';
 import { BrowserRouter, Route, Switch, useLocation } from 'react-router-dom';
 
-export default function GetNotes() {
+export default function GetNotesDashBoard() {
   const dispatch = useDispatch();
   const { bookId } = useParams();
   const { tagId } = useParams();
@@ -71,8 +71,7 @@ export default function GetNotes() {
         ) : (
           <div className='no-note-parent'>
             <h3 className='no-note'>
-              This book / tag has no associated notes.<br></br>Please make one
-              above.
+              <PostNote />
             </h3>
           </div>
         )}
