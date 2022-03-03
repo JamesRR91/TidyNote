@@ -12,7 +12,7 @@ function DeleteTag({ id }) {
   const handleSubmit = (e) => {
     e.preventDefault();
     dispatch(deleteTag(id));
-    history.push('/');
+    // history.push('/');
   };
 
   return (
