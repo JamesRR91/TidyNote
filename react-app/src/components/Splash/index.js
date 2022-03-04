@@ -4,6 +4,7 @@ import Sidebar from '../Sidebar/Sidebar';
 import GetNotes from '../GetNotes/GetNotes';
 import { useSelector } from 'react-redux';
 import Footer from '../Footer/Footer';
+import tidyNoteLaptop from './tidyNoteLaptop.png'
 
 export default function Splash() {
   const sessionUser = useSelector((state) => state.session.user);
@@ -21,7 +22,7 @@ export default function Splash() {
           </div>
           <div className='BoxTwo'>
             <img
-              src='https://catpedia.net/wp-content/uploads/2018/01/Chartreux-cat.jpg'
+              src={tidyNoteLaptop}
               className='laptopImage'
             ></img>
               <div className='BoxTwoQuotes'>
