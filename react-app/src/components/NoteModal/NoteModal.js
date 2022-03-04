@@ -77,7 +77,7 @@ export default function PostNoteModal({hideForm}){
         toolbar: [
           'bold', 'italic', '|',
           'link', '|',
-          'bulletedList', 'numberedList', '|',
+          // 'bulletedList', 'numberedList', '|',
           'blockQuote', '|',
           'undo', 'redo'
         ], shouldNotGroupWhenFull: true

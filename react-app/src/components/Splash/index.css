@@ -1,4 +1,4 @@
-.parent {
+/* .parent {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   grid-template-rows: repeat(4, 1fr);
@@ -7,19 +7,6 @@
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
-}
-
-.nav-container {
-  grid-area: 1 / 1 / 2 / 5;
-}
-.div2 {
-  grid-area: 4 / 1 / 5 / 5;
-}
-.SplashBox1 {
-  grid-area: 2 / 1 / 4 / 3;
-}
-.SplashBox2 {
-  grid-area: 2 / 3 / 4 / 5;
 }
 
 .nav-container{
@@ -61,4 +48,92 @@
   margin-top: 10px;
   font-size: 25px;
   text-align: center;
+} */
+
+
+.BoxOne {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    align-content: center;
+    justify-content: center;
+    align-items: center;
+}
+
+.welcome {
+    font-size: 60px;
+    margin-top: 50px;
+}
+
+.topOne {
+    font-size: 40px;
+    margin-top: 20px;
+}
+
+.topTwo {
+    font-size: 24px;
+    margin-top: 10px;
+    margin-bottom: 30px;
+}
+
+.laptopImage {
+    width: 40%;
+
+}
+
+.BoxTwo {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: center;
+    align-items: center;
+}
+
+.BoxTwoQuotes {
+    margin-left: 50px;
+    width: 223px;
+}
+
+.sideQuoteHeader{
+    font-weight: bolder;
+    margin-bottom: 10px;
+}
+
+.sideQuoteParagraph{
+    margin-bottom: 10px;
+}
+
+.welcomeTidyNoteSentence {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    align-content: center;
+    justify-content: center;
+    align-items: baseline;
+}
+
+.welcomeTidyNote{
+    margin-top: 20px;
+    font-size: 60px;
+    color:rgb(26, 155, 206);
+}
+
+.topOneSentence {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    align-content: center;
+    justify-content: center;
+    align-items: baseline;
+}
+
+.topOneColor{
+    font-size: 40px;
+    margin-top: 20px;
+    color:rgb(26, 155, 206);
+}
+
+.topOneRest {
+    font-size: 40px;
+    margin-top: 20px;
 }

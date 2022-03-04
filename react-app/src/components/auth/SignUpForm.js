@@ -93,7 +93,7 @@ const SignUpForm = () => {
             ></input>
           </div>
         </div>
-        <button type='submit'>Sign Up</button>
+        <button className='signupBttnColors' type='submit'>Sign Up</button>
         <div className="sub-cancel-buttons">
           <span className="cancel-button">
             <Link className="redirect-link" to="/">

@@ -3,3 +3,21 @@
     align-items: center;
     margin-left: 100px;
 }
+
+.signupBttnColors{
+    background-color: rgb(26, 138, 182);
+    font-weight: bold;
+    outline: 0;
+    border: 0;
+    text-decoration: none;
+    color: white;
+    border-radius: 7px;
+    padding: 7px;
+    cursor: pointer;
+    margin: 10px;
+  }
+
+  .signupBttnColors:hover{
+    background-color: lightblue;
+    color: black;
+  }
