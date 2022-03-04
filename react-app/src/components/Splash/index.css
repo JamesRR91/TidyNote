@@ -77,8 +77,8 @@
 }
 
 .laptopImage {
-    width: 35%;
-    
+    width: 40%;
+
 }
 
 .BoxTwo {
@@ -91,5 +91,14 @@
 
 .BoxTwoQuotes {
     margin-left: 50px;
-    width: 350px;
+    width: 223px;
+}
+
+.sideQuoteHeader{
+    font-weight: bolder;
+    margin-bottom: 10px;
+}
+
+.sideQuoteParagraph{
+    margin-bottom: 10px;
 }

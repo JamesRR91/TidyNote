@@ -29,27 +29,27 @@ export default function Splash() {
                 <h4 className='sideQuoteHeader'>
                   WORK ANYWHERE
                 </h4>
-                <h4 className='sideQuoteParagraph'>
+                <p className='sideQuoteParagraph'>
                 Keep important info handy—your notes be saved online.
-                </h4>
+                </p>
                 <h4 className='sideQuoteHeader'>
                 REMEMBER EVERYTHING
                 </h4>
-                <h4 className='sideQuoteParagraph'>
-                Make notes more useful by adding text, images, audio, scans, PDFs, and documents.
-                </h4>
+                <p className='sideQuoteParagraph'>
+                Make notes more useful by formatting your text.
+                </p>
                 <h4 className='sideQuoteHeader'>
-                TURN TO-DO INTO DONE
+                GET IT DONE
                 </h4>
-                <h4 className='sideQuoteParagraph'>
-                Bring your notes, tasks, and schedules together to get things done more easily.
-                </h4>
+                <p className='sideQuoteParagraph'>
+                Bring your books, notes, and tags together to get things done more easily.
+                </p>
                 <h4 className='sideQuoteHeader'>
                 FIND THINGS FAST
                 </h4>
-                <h4 className='sideQuoteParagraph'>
-                Get what you need, when you need it with powerful, flexible search capabilities.
-                </h4>
+                <p className='sideQuoteParagraph'>
+                Get what you need, when you need it with our powerful book and tag filters.
+                </p>
               </div>
           </div>
         </div>
