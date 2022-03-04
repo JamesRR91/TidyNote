@@ -58,7 +58,7 @@ export default function EditNote({ id }) {
     toolbar: [
       'bold', 'italic', '|',
       'link', '|',
-      'bulletedList', 'numberedList', '|',
+      // 'bulletedList', 'numberedList', '|',
       'blockQuote', '|',
       'undo', 'redo'
     ], shouldNotGroupWhenFull: true

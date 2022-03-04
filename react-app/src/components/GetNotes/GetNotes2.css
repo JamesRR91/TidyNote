@@ -81,3 +81,8 @@
     color: #2e41ad;
     color: rgb(0, 191, 255);
 }
+
+.ck-editor__editable_inline {
+    color:black;
+    height: 300px;
+  }
