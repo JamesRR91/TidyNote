@@ -14,8 +14,16 @@ export default function Splash() {
       <div>
         <div className='parent'>
           <div className='BoxOne'>
-            <h3 className='welcome'>Welcome to TidyNote.</h3>
-            <h4 className='topOne'>Tame Your Work. Organize Your Life.</h4>
+            <div className='welcomeTidyNoteSentence'>
+              <h3 className='welcome'>Welcome to&nbsp;</h3>
+              <h3 className='welcomeTidyNote'>TidyNote</h3>
+            </div>
+            <div className='topOneSentence'>
+              <h3 className='topOneColor'>Tame&nbsp;</h3>
+              <h3 className='topOneRest'>Your Work.&nbsp;</h3>
+              <h3 className='topOneColor'>Organize&nbsp;</h3>
+              <h3 className='topOneRest'>Your Life.</h3>
+            </div>
             <h4 className='topTwo'>
               Remember everything and tackle any project with your books, notes, and tags all in one place.
             </h4>

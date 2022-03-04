@@ -102,3 +102,38 @@
 .sideQuoteParagraph{
     margin-bottom: 10px;
 }
+
+.welcomeTidyNoteSentence {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    align-content: center;
+    justify-content: center;
+    align-items: baseline;
+}
+
+.welcomeTidyNote{
+    margin-top: 20px;
+    font-size: 60px;
+    color:rgb(26, 155, 206);
+}
+
+.topOneSentence {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    align-content: center;
+    justify-content: center;
+    align-items: baseline;
+}
+
+.topOneColor{
+    font-size: 40px;
+    margin-top: 20px;
+    color:rgb(26, 155, 206);
+}
+
+.topOneRest {
+    font-size: 40px;
+    margin-top: 20px;
+}
