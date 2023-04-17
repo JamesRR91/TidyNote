@@ -8,6 +8,10 @@ from sqlalchemy import pool
 
 from alembic import context
 
+import os
+environment = os.getenv("FLASK_ENV")
+SCHEMA = os.environ.get('SCHEMA')
+
 # this is the Alembic Config object, which provides
 # access to the values within the .ini file in use.
 config = context.config
@@ -79,14 +83,31 @@ def run_migrations_online():
     )
 
     with connectable.connect() as connection:
-        context.configure(
-            connection=connection,
-            target_metadata=target_metadata,
-            process_revision_directives=process_revision_directives,
-            **current_app.extensions['migrate'].configure_args
-        )
+        try:
+            context.configure(
+                connection=connection,
+                target_metadata=target_metadata,
+                process_revision_directives=process_revision_directives,
+                **current_app.extensions['migrate'].configure_args
+            )
 
-        with context.begin_transaction():
+            if environment == 'production':
+                print('THIS IS CONNECTION', connection)
+                connection.execute(f"CREATE SCHEMA IF NOT EXISTS {SCHEMA}")
+
+            with context.begin_transaction():
+                if environment == 'production':
+                    context.execute(f"SET search_path TO {SCHEMA}")
+                context.run_migrations()
+        except exc.ResourceClosedError:
+            # Reopen the connection and try again
+            connection = engine.connect()
+            context.configure(
+                connection=connection,
+                target_metadata=target_metadata,
+                process_revision_directives=process_revision_directives,
+                **current_app.extensions['migrate'].configure_args
+            )
             context.run_migrations()
 
 
