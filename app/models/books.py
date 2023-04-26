@@ -9,7 +9,7 @@ class Book(db.Model, UserMixin):
 
     id = db.Column(db.Integer, primary_key=True)
     book_name = db.Column(db.String(25), nullable=False)
-    userId = db.Column(db.Integer, db.ForeignKey(add_prefix_for_prod('users.id'), nullable=False))
+    userId = db.Column(db.Integer, db.ForeignKey(add_prefix_for_prod('users.id')), nullable=False)
     user=db.relationship('User', back_populates='books')
     notes=db.relationship('Note', back_populates='book', cascade='all, delete')
 

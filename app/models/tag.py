@@ -10,7 +10,7 @@ class Tag(db.Model, UserMixin):
 
     id = db.Column(db.Integer, primary_key=True)
     tag_name = db.Column(db.String(15), nullable=False)
-    userId= db.Column(db.Integer, db.ForeignKey(add_prefix_for_prod('users.id'), nullable=False ))
+    userId= db.Column(db.Integer, db.ForeignKey(add_prefix_for_prod('users.id')), nullable=False )
     user=db.relationship('User', back_populates='tags')
     notes=db.relationship('Note', secondary=tagged_notes, back_populates='tags')
 
