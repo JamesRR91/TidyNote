@@ -7,7 +7,7 @@ from sqlalchemy.types import Integer, String
 
 tagged_notes = db.Table(
     "tagged_notes",
-    db.Column("tagId", db.Integer, db.ForeignKey(add_prefix_for_prod("tags.id")), primary_key=True),
-    db.Column("noteId", db.Integer, db.ForeignKey(add_prefix_for_prod("notes.id")), primary_key=True))
+    db.Column("tagId", db.Integer, db.ForeignKey("tags.id"), primary_key=True),
+    db.Column("noteId", db.Integer, db.ForeignKey("notes.id"), primary_key=True))
 if environment == "production":
     tagged_notes.schema = SCHEMA
