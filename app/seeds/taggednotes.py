@@ -1,4 +1,5 @@
 from app.models import db, tagged_notes, Tag, Note
+from app.models.db import environment, SCHEMA
 
 
 # Adds a demo user, you can add other users here if you want
@@ -53,7 +54,13 @@ def seed_taggednotes():
 # resets the auto incrementing primary key, CASCADE deletes any
 # dependent entities
 def undo_taggednotes():
-    db.session.execute('TRUNCATE notes RESTART IDENTITY CASCADE;')
-    db.session.execute('TRUNCATE tags RESTART IDENTITY CASCADE;')
-    db.session.execute('TRUNCATE tagged_notes RESTART IDENTITY CASCADE;')
+    if environment == 'production':
+        db.session.execute(f"TRUNCATE table {SCHEMA}.notes RESTART IDENTITY CASCADE;")
+        db.session.execute(f"TRUNCATE table {SCHEMA}.tags RESTART IDENTITY CASCADE;")
+        db.session.execute(f"TRUNCATE table {SCHEMA}.tagged_notes RESTART IDENTITY CASCADE;")
+    else:
+        db.session.execute("DELETE FROM notes")
+        db.session.execute("DELETE FROM tags")
+        db.session.execute("DELETE FROM tagged_notes")
+        
     db.session.commit()

@@ -1,4 +1,5 @@
 from app.models import db, Note
+from app.models.db import environment, SCHEMA
 
 
 # Adds a demo user, you can add other users here if you want
@@ -32,5 +33,9 @@ def seed_notes():
 # resets the auto incrementing primary key, CASCADE deletes any
 # dependent entities
 def undo_notes():
-    db.session.execute('TRUNCATE notes RESTART IDENTITY CASCADE;')
+    if environment == 'production':
+        db.session.execute(f"TRUNCATE table {SCHEMA}.notes RESTART IDENTITY CASCADE;")
+    else:
+        db.session.execute("DELETE FROM notes")
+
     db.session.commit()

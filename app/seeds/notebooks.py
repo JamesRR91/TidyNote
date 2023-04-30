@@ -1,4 +1,5 @@
 from app.models import db, Book
+from app.models.db import environment, SCHEMA
 
 
 # Adds a demo user, you can add other users here if you want
@@ -23,5 +24,9 @@ def seed_books():
 # resets the auto incrementing primary key, CASCADE deletes any
 # dependent entities
 def undo_books():
-    db.session.execute('TRUNCATE books RESTART IDENTITY CASCADE;')
+    if environment == 'production':
+        db.session.execute(f"TRUNCATE table {SCHEMA}.books RESTART IDENTITY CASCADE;")
+    else:
+        db.session.execute("DELETE FROM books")
+
     db.session.commit()
