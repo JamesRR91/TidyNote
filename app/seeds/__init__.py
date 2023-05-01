@@ -1,6 +1,8 @@
 from flask.cli import AppGroup
 from .users import seed_users, undo_users
 from .notebooks import seed_books, undo_books
+from .notes import seed_notes, undo_notes
+from .tags importr seed_tags, undo_tags
 from .taggednotes import seed_taggednotes, undo_taggednotes
 from app.models.db import db, environment, SCHEMA
 
@@ -14,11 +16,15 @@ seed_commands = AppGroup('seed')
 def seed():
     if environment == 'production':
         # Before seeding, truncate all tables prefixed with schema name
-        undo_users()
-        undo_books()
         undo_taggednotes()
+        # undo_tags()
+        # undo_notes()
+        undo_books()
+        undo_users()
     seed_users()
     seed_books()
+    # seed_notes()
+    # seed_tags()
     seed_taggednotes()
 
         # db.session.execute(f"TRUNCATE table {SCHEMA}.users RESTART IDENTITY CASCADE;")
