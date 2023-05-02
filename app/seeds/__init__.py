@@ -2,7 +2,7 @@ from flask.cli import AppGroup
 from .users import seed_users, undo_users
 from .notebooks import seed_books, undo_books
 from .notes import seed_notes, undo_notes
-from .tags importr seed_tags, undo_tags
+from .tags import seed_tags, undo_tags
 from .taggednotes import seed_taggednotes, undo_taggednotes
 from app.models.db import db, environment, SCHEMA
 
