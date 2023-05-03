@@ -30,7 +30,7 @@ def upgrade():
     sa.PrimaryKeyConstraint('tagId', 'noteId')
     )
     if environment == 'production':
-        op.execute(f"ALTER TABLE users SET SCHEMA {SCHEMA};")
+        op.execute(f"ALTER TABLE tagged_notes SET SCHEMA {SCHEMA};")
     # ### end Alembic commands ###
 
 
