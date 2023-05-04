@@ -7,6 +7,7 @@ from sqlalchemy.types import Integer, String
 
 tagged_notes = db.Table(
     "tagged_notes",
+    db.Model.metadata,
     db.Column("tagId", db.Integer, db.ForeignKey("tags.id"), primary_key=True),
     db.Column("noteId", db.Integer, db.ForeignKey("notes.id"), primary_key=True)
 )
