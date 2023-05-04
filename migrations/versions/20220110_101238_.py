@@ -44,6 +44,7 @@ def upgrade():
 
     if environment == 'production':
         op.execute(f"ALTER TABLE tags SET SCHEMA {SCHEMA};")
+
     op.create_table('notes',
     sa.Column('id', sa.Integer(), nullable=False),
     sa.Column('note_name', sa.String(length=30), nullable=False),
@@ -53,7 +54,7 @@ def upgrade():
     sa.PrimaryKeyConstraint('id')
     )
     if environment == 'production':
-        op.execute(f"ALTER TABLE tags SET SCHEMA {SCHEMA};")
+        op.execute(f"ALTER TABLE notes SET SCHEMA {SCHEMA};")
     # ### end Alembic commands ###
 
 
