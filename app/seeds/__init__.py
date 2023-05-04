@@ -17,14 +17,14 @@ def seed():
     if environment == 'production':
         # Before seeding, truncate all tables prefixed with schema name
         undo_taggednotes()
-        # undo_tags()
-        # undo_notes()
+        undo_tags()
+        undo_notes()
         undo_books()
         undo_users()
     seed_users()
     seed_books()
-    # seed_notes()
-    # seed_tags()
+    seed_notes()
+    seed_tags()
     seed_taggednotes()
 
         # db.session.execute(f"TRUNCATE table {SCHEMA}.users RESTART IDENTITY CASCADE;")
@@ -40,6 +40,8 @@ def seed():
 @seed_commands.command('undo')
 def undo():
     undo_taggednotes()
+    undo_tags()
+    undo_notes()
     undo_books()
     undo_users()
     # Add other undo functions here
